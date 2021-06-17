@@ -25,7 +25,7 @@ To run the server:
 
 ```sh
 cd server
-cp env.example .env
+cp .env.example .env
 code .env # put in your database values and session secret
 npm run dev
 ```
