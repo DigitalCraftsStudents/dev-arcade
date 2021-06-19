@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Increment = props => (
+const Increment = (props) => (
   <div>
-    <button onClick={props.handleClick}>+</button>
+    <button onClick={props.handleClick}>Yo! Add!</button>
+    
   </div>
 );
 
