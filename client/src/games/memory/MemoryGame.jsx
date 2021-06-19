@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 
 const MemoryGame = (props) => (
   <div>
-    <h1>Hello from Memory Game!</h1>
+    <h1>Hello from Memory Game! part 2</h1>
   </div>
 );
 

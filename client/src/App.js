@@ -21,7 +21,7 @@ function App() {
       <nav>
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
-        <Link to="/memory">Memory Game</Link>
+        <Link to="/memory">MemoryGame</Link>
       </nav>
       <Switch>
         <Route path="/counter">
