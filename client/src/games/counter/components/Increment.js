@@ -2,7 +2,7 @@ import React from 'react';
 
 const Increment = props => (
   <div>
-    <button onClick={props.handleClick}>+</button>
+    <button onClick={props.handleClick}>Add this up</button>
   </div>
 );
 
