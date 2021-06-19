@@ -69,6 +69,23 @@ be responsible for managing their code within their games designated directory.
 
 [react-redux]:https://react-redux.js.org/
 
+## Project Management Process
+
+### Team Setup
+#### Each team needs:
+* [ ] Identify a scrum master who will manage the team's progress and report for the team during our daily scrum (stand-up)
+* [ ] Sprint Board. Can either be in Trello, or te team cna create a new project the `Projects` tab dev-arcade GitHub repository, or a comparable Scrum/Kanban management tool
+* [ ] Slack channel. Invite the instructor team into your Slack channels so that we can help you
+* [ ] Team branch of the dev-arcade project repo that will push into the dev branch (e.g. `ChessTeamBranch`)
+* [ ] Feature branches for each individual piece of work that will push into your team branch (e.g. `dg/buildingChessComponentBranch`)
+
+### Process
+* [ ] Work on a piece of work in your personal Feature branch (e.g. `dg/buildingChessComponentBranch`). When you're done, create a pull request (PR) to merge your work into your team's branch (e.g PR to merge `dg/buildingChessComponentBranch` into `ChessTeamBranch`). **DO NOT DO FEATURE WORK DIRECTLY ON YOUR TEAM'S BRANCH!!**
+* [ ] Before your work can be merged, a team member should review and approve your PR.
+* [ ] Periodically, we will merge your team's branch into the dev branch (e.g. merge `ChessTeamBranch` into `dev`)
+* [ ] `main` will serve as our production branch. Once we deploy `main`, we will periodically merge the `dev` branch into `main` (e.g. merge `ChessTeamBranch` into `dev`)
+
+
 --------------------------------------------------------------------------------
 
 This requirements document is licensed as [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/):
