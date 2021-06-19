@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/counter">Counter Game</Link>
+        <Link to="/Minesweeper">MineSweeper</Link>
         <Link to="/ping">Ping</Link>
       </nav>
         <Switch>
