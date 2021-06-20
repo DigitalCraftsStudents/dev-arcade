@@ -5,6 +5,7 @@ import { store } from './store';
 import GridBoard from './components/GridBoard';
 import NextBlock from './components/NextBlock';
 import Controls from './components/Controls'
+import MessagePopup from './components/MessagePopup'
 
 import './css/tetris.css'
 
@@ -17,6 +18,7 @@ const Tetris = (props) => (
       <GridBoard />
       <NextBlock />
       <Controls />
+      <MessagePopup />
     </div>
 );
 
