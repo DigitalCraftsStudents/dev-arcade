@@ -1,6 +1,8 @@
 import React from 'react';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import reducers from './reducers'
+
 
 import GridBoard from './components/GridBoard';
 import NextBlock from './components/NextBlock';
@@ -10,8 +12,10 @@ import MessagePopup from './components/MessagePopup'
 
 import './css/tetris.css'
 
-const Tetris = (props) => (
+const store = createStore(reducers)
 
+const Tetris = (props) => ( 
+  <Provider store={store}>
     <div className="tetris">
       <header className="tetris-header">
         <h1>Welcome to Tetris</h1>
@@ -22,6 +26,8 @@ const Tetris = (props) => (
       <Controls />
       <MessagePopup />
     </div>
+    </Provider>
+
 );
 
 export default Tetris;
