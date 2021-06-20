@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './store';
 
-import GridSquare from './components/GridSquare.js';
+import GridBoard from './components/GridBoard';
 import Controls from './components/Controls'
 
 import './css/tetris.css'
@@ -13,10 +13,9 @@ const Tetris = (props) => (
       <header className="App-header">
         <h1>Welcome to Tetris</h1>
       </header>
-      <GridSquare color="1" />
+      <GridBoard />
       <Controls />
     </div>
-
 );
 
 export default Tetris;
