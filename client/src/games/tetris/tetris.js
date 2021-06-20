@@ -12,8 +12,8 @@ import './css/tetris.css'
 
 const Tetris = (props) => (
 
-    <div className="App">
-      <header className="App-header">
+    <div className="tetris">
+      <header className="tetris-header">
         <h1>Welcome to Tetris</h1>
       </header>
       <GridBoard />
