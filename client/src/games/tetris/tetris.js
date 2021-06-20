@@ -14,11 +14,10 @@ import './css/tetris.css'
 
 const store = createStore(reducers)
 
-
 const Tetris = (props) => ( 
-<Provider store={store}>
-  <div className="App">
-      <header className="App-header">
+  <Provider store={store}>
+    <div className="tetris">
+      <header className="tetris-header">
         <h1>Welcome to Tetris</h1>
       </header>
       <GridBoard />
