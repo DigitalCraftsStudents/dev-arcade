@@ -5,7 +5,15 @@ import { shapes } from "../utils";
 
 export default function GridBoard(props) {
   const game = useSelector((state) => state.game);
-  const { grid, shape, rotation, x, y, isRunning, speed } = game;
+  const { shape, rotation, x, y, isRunning, speed } = game;
+
+  const grid = [];
+  for (let row = 0; row < 18; row++) {
+    grid.push([]);
+    for (let col = 0; col < 10; col++) {
+      grid[row].push(<GridSquare key={`${col}${row}`} color="1" />);
+    }
+  }
 
   const block = shapes[shape][rotation];
   const blockColor = shape;
