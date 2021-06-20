@@ -3,7 +3,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers'
 
-
 import GridBoard from './components/GridBoard';
 import NextBlock from './components/NextBlock';
 import ScoreBoard from './components/ScoreBoard';
