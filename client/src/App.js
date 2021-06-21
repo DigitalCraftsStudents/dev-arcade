@@ -15,6 +15,7 @@ import {
  */
 
 import CounterGame from './games/counter/CounterGame';
+import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
 
 import Ping from './components/Ping';
 
@@ -23,7 +24,9 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/counter">Counter Game</Link>
-        <Link to="/Minesweeper">MineSweeper</Link>
+        <br></br>
+        <Link to="/Minesweeper">MineSweeper Game</Link>
+        <br></br>
         <Link to="/ping">Ping</Link>
       </nav>
         <Switch>
@@ -32,6 +35,9 @@ function App() {
           </Route>
           <Route path="/ping">
             <Ping />
+          </Route>
+          <Route path="/Minesweeper">
+            <CounterGame />
           </Route>
         </Switch>
     </div>

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,40 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+body{
+  background:url(https://images.unsplash.com/photo-1542789828-6c82d889ed74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80) no-repeat center center fixed;
+  background-size:cover;   
+}
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #282c34;
+  background-color: #00226d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.aligned{
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+  text-align: center;
+  color: white;
+  font-size:35px;
+  text-shadow:2px 1px rgb(154, 255, 255);
 }
