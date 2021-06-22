@@ -1,0 +1,48 @@
+
+.card-container{
+    width: 200px;
+    height: 150px;
+    border: black 2px;
+    background-color: orange;
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.card-container hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+    .card-container {
+      height: 150px;
+      width: 150px;
+    }
+  }
+/* holding the below for the actual cards later 
+  */
+  span.a {
+    display: inline; /* the default for span */
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;  
+    background-color: yellow; 
+  }
+  
+  span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+  }
+  
+  span.c {
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: yellow; 
+  }
