@@ -145,7 +145,7 @@ export const defaultState = () => {
     rotation: 0,
     // set the 'x' position of the shape to 5 and y to -4, which puts the shape in the center of the grid, above the top
     x: 4,
-    y: 0,
+    y: -1,
     // set the index of the next shape to a new random shape
     nextShape: randomShape(),
     // Tell the game that it's currently running
