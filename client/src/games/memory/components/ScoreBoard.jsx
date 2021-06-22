@@ -4,7 +4,7 @@ import './Card.css';
 function ScoreBoard() {
     return(
         <div>
-            Hello From Score Board
+            Hello From User Name
         </div>
     )
 }
