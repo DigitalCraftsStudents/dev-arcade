@@ -37,7 +37,7 @@ function App() {
             <Ping />
           </Route>
           <Route path="/Minesweeper">
-            <CounterGame />
+            <MinesweeperGame/>
           </Route>
         </Switch>
     </div>
