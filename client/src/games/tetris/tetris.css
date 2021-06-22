@@ -1,11 +1,10 @@
 /* App */
-.tetris{
+.App {
   --col-side: calc(var(--tile-size) * 4);
   --col-center: calc(var(--tile-size) * 10);
   --grid-height: calc(var(--tile-size) * 18);
 
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
-  padding-top: 15px;
   margin: auto;
   display: grid;
 
@@ -22,7 +21,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
                        ". b .";
 }
 
-.tetris-header {
+.App-header {
   background-color: #282c34;
   min-height: 10vh;
   grid-area: h;
@@ -32,8 +31,69 @@ and 'b'. The '.' represents an empty cell on the grid. */
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/* Next Block */
+.next-block {
+  display: grid;
+  grid-template-columns: repeat(4, var(--tile-size));
+  align-self: flex-start;
+  grid-area: l; /* Grid area l left column */
 
 }
+
+/* Grid Board */
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile-size));
+  grid-gap: 0;
+  align-self: flex-start;
+  grid-area: c; /* Assign to grid area c */
+
+}
+
+/* score-board */
+.score-board {
+  grid-area: r;
+}
+
+/* controls */
+.controls {
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Control Button */
+.control-button {
+  --size: calc(var(--tile-size) * 2.5);
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  display: block;
+  border-width: 5px;
+  border-top-color: var(--button-color-t);
+  border-left-color: var(--button-color-l);
+  border-right-color: var(--button-color-r);
+  border-bottom-color: var(--button-color-b);
+}
+
+/* Message Popup Styles */
+.message-popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--tile-size) * 10);
+  height: calc(var(--tile-size) * 10);
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.message-popup.hidden {
+  display: none;
+}
+
 
 :root {
   --bg-color: rgba(150, 150, 150, 1);
@@ -103,7 +163,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
 
 /* Grid Square */
 .grid-square {
-  border-style:solid;
+  border-style: solid;
   width: var(--tile-size);
   height: var(--tile-size);
   border-width: var(--border-width);
@@ -113,54 +173,15 @@ and 'b'. The '.' represents an empty cell on the grid. */
   border-bottom-color: var(--border-bottom-color);
 }
 
-/* controls */
-.controls {
-  grid-area: b;
-  display: flex;
-  flex-direction: row;
-}
-
-/* Control Button */
-.control-button {
-  --size: calc(var(--tile-size) * 2.5);
-  width: var(--size);
-  height: var(--size);
-  text-align: center;
-  display: block;
-  border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
-}
-
-.message-popup {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(var(--tile-size) * 10);
-  height: calc(var(--tile-size) * 10);
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-}
-
-.message-popup.hidden {
-  display: none;
-}
- 
 * {
   box-sizing: border-box;
 }
 
-/* Grid Board */
 .grid-board {
   display: grid;
   grid-template-columns: repeat(var(--cols), var(--tile-size));
   grid-gap: 0;
   align-self: flex-start;
-  grid-area: c; /* Assign to grid area c */
-
 }
 
 /* Next Block */
@@ -168,7 +189,6 @@ and 'b'. The '.' represents an empty cell on the grid. */
   display: grid;
   grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
-  grid-area: l; /* Grid area l left column */
 }
 
 /* Score Board */
@@ -180,10 +200,5 @@ and 'b'. The '.' represents an empty cell on the grid. */
   border-left-color: var(--button-color-l);
   border-right-color: var(--button-color-r);
   border-bottom-color: var(--button-color-b);
-  
-}
-
-.score-board {
-  grid-area: r;
 }
 

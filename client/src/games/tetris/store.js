@@ -1,7 +1,15 @@
-// import { createStore } from "redux";
+import { createStore } from "redux";
 
-// const defaultState = {
+const defaultState = {
+    state = {
+  game: {
+    nextShape: 1,
+    rotation: 1,
+    grid: [bunch, of, values],
+    more, properrties
+  }
+}
 
-// };
+};
 
-// export const store = createStore(defaultStatus);
+export const store = createStore(defaultStatus);
