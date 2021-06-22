@@ -13,12 +13,12 @@ import MessagePopup from "./components/MessagePopup";
 
 const store = createStore(reducers);
 
-function App() {
+function Tetris() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="Tetris">
         <header className="App-header">
-          <h1 className="App-title">Tetris Redux</h1>
+          <h1 className="App-title">Tetris</h1>
         </header>
         <GridBoard />
         <NextBlock />
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tetris;

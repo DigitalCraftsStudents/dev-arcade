@@ -1,5 +1,5 @@
 /* App */
-.App {
+.Tetris {
   --col-side: calc(var(--tile-size) * 4);
   --col-center: calc(var(--tile-size) * 10);
   --grid-height: calc(var(--tile-size) * 18);
@@ -7,6 +7,7 @@
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
   margin: auto;
   display: grid;
+  margin-top: 10px;
 
   grid-gap: var(--tile-size) var(--tile-size);
   /* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
