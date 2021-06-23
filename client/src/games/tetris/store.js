@@ -3,10 +3,10 @@ import { createStore } from "redux";
 const defaultState = {
     state = {
   game: {
-    nextShape: 1,
+    nextShape: `grid-square color-${props.color}`,
     rotation: 1,
     grid: [bunch, of, values],
-    more, properrties
+    more, properties
   }
 }
 

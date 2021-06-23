@@ -23,7 +23,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3D144C;
   min-height: 10vh;
   grid-area: h;
   display: flex;
@@ -39,8 +39,6 @@ and 'b'. The '.' represents an empty cell on the grid. */
   display: grid;
   grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
-  grid-area: l; /* Grid area l left column */
-
 }
 
 /* Grid Board */
@@ -72,11 +70,9 @@ and 'b'. The '.' represents an empty cell on the grid. */
   height: var(--size);
   text-align: center;
   display: block;
-  border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
+  border-radius: 5px;
+  background-color: var(--color-0);
+  color: #FAEB2C;
 }
 
 /* Message Popup Styles */
@@ -106,14 +102,14 @@ and 'b'. The '.' represents an empty cell on the grid. */
   --border-bottom-color: rgba(0, 0, 0, 0.5);
 
   /* Square Colors:  background colors for the squares.*/
-  --color-0: #eaeaea;
-  --color-1: #ff6600;
-  --color-2: #eec900;
-  --color-3: #0000ff;
-  --color-4: #cc00ff;
-  --color-5: #00ff00;
-  --color-6: #66ccff;
-  --color-7: #ff0000;
+  --color-0: #000000;
+  --color-1: #006bc2;
+  --color-2: #FF0099;
+  --color-3: #ffee00;
+  --color-4: #1DD73C;
+  --color-5: #FF5F1F;
+  --color-6: #00FFFF;
+  --color-7: #F51D00;
 
   /* Button Colors */
   --button-color-t: rgba(200, 200, 200, 1);
@@ -164,10 +160,10 @@ and 'b'. The '.' represents an empty cell on the grid. */
 
 /* Grid Square */
 .grid-square {
-  border-style: solid;
+  border-style: groove;
   width: var(--tile-size);
   height: var(--tile-size);
-  border-width: var(--border-width);
+  border-width: 3px;
   border-left-color: var(--border-left-color);
   border-top-color: var(--border-top-color);
   border-right-color: var(--border-right-color);
@@ -185,21 +181,13 @@ and 'b'. The '.' represents an empty cell on the grid. */
   align-self: flex-start;
 }
 
-/* Next Block */
-.next-block {
-  display: grid;
-  grid-template-columns: repeat(4, var(--tile-size));
-  align-self: flex-start;
-}
 
 /* Score Board */
 .score-board-button {
   display: block;
   padding: 1em;
-  border-width: 5px;
-  border-top-color: var(--button-color-t);
-  border-left-color: var(--button-color-l);
-  border-right-color: var(--button-color-r);
-  border-bottom-color: var(--button-color-b);
+  border-radius: 5px;
+  background-color: var(--color-0);
+  color: #FAEB2C;
 }
 
