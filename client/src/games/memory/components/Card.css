@@ -7,8 +7,12 @@
     overflow: hidden;
     display: inline-flex;
 }
+.clicked{
+  background-color: blue;
+}
 
-.card-container hover {
+
+.card-container:hover {
     transform: scale(1.1);
 }
 
