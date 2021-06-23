@@ -2,6 +2,7 @@ import React from 'react';
 import Board from './components/Board';
 <<<<<<< HEAD
 import ScoreBoard from './components/ScoreBoard';
+import SignupForm from './components/SignupForm';
 // import './App.css';
 =======
 import App from './components/timer';
@@ -11,6 +12,8 @@ import App from './components/timer';
 function MinesweeperGame() {
   return (
     <div>
+      <SignupForm />   <ScoreBoard/>
+
       <div className="heading">
       <h1>Mine......Sweeper</h1>
       </div>
@@ -19,7 +22,7 @@ function MinesweeperGame() {
       </div>
       <div className="aligned">   
         <Board/>
-        <ScoreBoard/>
+        
       </div>
     </div>
   );
