@@ -4,12 +4,14 @@ import { Provider } from "react-redux";
 import reducers from "./reducers";
 
 import "./tetris.css";
+import title from './images/tetris.png'
 
 import GridBoard from "./components/GridBoard";
 import NextBlock from "./components/NextBlock";
 import ScoreBoard from "./components/ScoreBoard";
 import Controls from "./components/Controls";
 import MessagePopup from "./components/MessagePopup";
+
 
 const store = createStore(reducers);
 
@@ -18,7 +20,11 @@ function Tetris() {
     <Provider store={store}>
       <div className="Tetris">
         <header className="App-header">
-          <h1 className="App-title">Tetris</h1>
+          <img
+          src={title}
+          alt="title"
+          className="title"
+        />
         </header>
         <GridBoard />
         <NextBlock />
