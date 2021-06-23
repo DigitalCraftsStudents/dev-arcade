@@ -6,6 +6,10 @@ import {
   Link
 } from 'react-router-dom';
 
+import {
+  Chessboard
+} from 'chessboardjsx'
+
 /**
  * Games will be loaded into the Arcade here
  * 
@@ -31,8 +35,12 @@ function App() {
           </Route>
           <Route path="/ping">
             <Ping />
+            <Chessboard />
+
           </Route>
         </Switch>
+
+
     </div>
   );
 }
