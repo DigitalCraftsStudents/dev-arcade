@@ -15,6 +15,7 @@ import {
  */
 
 import CounterGame from './games/counter/CounterGame';
+import Rps from './games/rps/Rps'
 
 import Ping from './components/Ping';
 
@@ -24,6 +25,7 @@ function App() {
       <nav>
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
+        <Link to="/rps">Rock Paper Scissors</Link>
       </nav>
         <Switch>
           <Route path="/counter">
@@ -31,6 +33,9 @@ function App() {
           </Route>
           <Route path="/ping">
             <Ping />
+          </Route>
+          <Route path="/rps">
+            <Rps />
           </Route>
         </Switch>
     </div>
