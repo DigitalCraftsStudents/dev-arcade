@@ -14,7 +14,7 @@ import { store } from "./store";
 function Rps() {
   return (
     <Provider store={store}>
-      <div className="undo_text_align">
+      <div className="undo_text_align rps_body">
         <Header />
         <Score />
         <Increment />

@@ -1,4 +1,4 @@
-body {
+.rps_body {
   background-color: #222;
   color: #fff;
   font-family: "DotGothic16", sans-serif;
@@ -32,6 +32,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .rps_h1::before {
   background: none;
   content: attr(data-text);
@@ -45,6 +46,7 @@ body {
   -webkit-text-fill-color: transparent;
   opacity: 0.5;
 }
+
 .rps_h1::after {
   background: none;
   content: attr(data-text);
