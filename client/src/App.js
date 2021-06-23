@@ -16,7 +16,6 @@ import {
 
 import CounterGame from './games/counter/CounterGame';
 import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
-
 import Ping from './components/Ping';
 
 function App() {

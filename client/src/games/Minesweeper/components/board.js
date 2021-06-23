@@ -20,7 +20,7 @@ function Board() {
         freshBoard();
     },[]);
 
-    // Making freshboard atstart
+    // Making freshboard at start
     const freshBoard = () => {
         const newBoard=CreateBoard(10,10,20);
         setNonMinecount(10*10-20);

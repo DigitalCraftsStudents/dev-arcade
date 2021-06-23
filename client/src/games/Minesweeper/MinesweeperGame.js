@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './components/Board';
+import ScoreBoard from './components/ScoreBoard';
 // import './App.css';
 
 function MinesweeperGame() {
@@ -10,6 +11,7 @@ function MinesweeperGame() {
       </div>
       <div className="aligned">   
         <Board/>
+        <ScoreBoard/>
       </div>
     </div>
   );
