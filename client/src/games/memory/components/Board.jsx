@@ -5,7 +5,7 @@ function Board(){
     return (
         <div style={{background: 'green'}}>
             cards go here
-            <Card></Card><Card></Card><Card></Card>
+            <Card></Card>
            
         </div>
     )
