@@ -1,13 +1,9 @@
 import React from 'react';
 import Board from './components/Board';
-<<<<<<< HEAD
-import ScoreBoard from './components/ScoreBoard';
-import SignupForm from './components/SignupForm';
-// import './App.css';
-=======
 import App from './components/timer';
+import SignupForm from './components/SignupForm';
+import ScoreBoard from './components/ScoreBoard';
 
->>>>>>> bb163c21acbc5730a02aa5eb5c9eb3d249c4d715
 
 function MinesweeperGame() {
   return (
