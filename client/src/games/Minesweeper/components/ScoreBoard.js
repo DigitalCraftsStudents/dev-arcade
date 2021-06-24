@@ -4,14 +4,14 @@ export default function ScoreBoard(props) {
     return (
         <div className="score-board">
             <div>
-                <h1>
+                <h1 style={{color: "#E900FF"}}>
                         Score:{ props.score } 
                 </h1>
             </div>
          
-            <button className="score-board-button" onClick={(e) => {
+            <button style={{backgroundColor: "#E900FF", color: "#FAEB2C", alignItems:"center"}} className="score-board-button" onClick={(e) => {
             }}>Play Game</button>
-            <button className="score-board-button" onClick={(e) => {
+            <button style={{backgroundColor: "#E900FF", color: "#FAEB2C"}} className="score-board-button" onClick={(e) => {
             }}>Restart</button>
         </div>
     )

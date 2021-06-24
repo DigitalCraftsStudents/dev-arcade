@@ -4,7 +4,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <form>
-                <h1>Player Name</h1>
+                <h1 style={{color: "#E900FF"}}>Player Name</h1>
 
                 <div className="form-group">
                     <label className="control-label"></label>

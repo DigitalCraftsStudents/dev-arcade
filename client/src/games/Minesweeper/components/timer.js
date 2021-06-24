@@ -45,7 +45,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h3>React Stopwatch</h3>
+      <h3 style={{color: "#E900FF"}}>React Stopwatch</h3>
       <div className='stopwatch-card'>
         <p>{formatTime()}</p>
         <div className='buttons'>
