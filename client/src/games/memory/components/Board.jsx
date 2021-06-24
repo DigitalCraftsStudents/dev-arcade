@@ -4,7 +4,7 @@ import Card from "./Card.jsx";
 
 function Board() {
   return (
-    <div style={{ background: "green" }}>
+    <div style={{ background: "rgb(22,133,248)" }}>
       How Quickly Can You Match
       <div className="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
