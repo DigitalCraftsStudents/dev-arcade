@@ -146,7 +146,7 @@
   border: 1px solid rgb(158, 83, 201);
 }
 
-span {
+.actionBtn {
   border: 1px solid rgb(158, 83, 201);
   font-size: small;
   padding: 1px;
@@ -157,11 +157,17 @@ span {
 }
 
 #pickObject {
-  margin-top: 33%;
+  /* margin-top: 33%; */
   position: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgb(145, 102, 173);
   height: 90px;
+}
+
+.action{
+  height: 40%;
+  width: 40%;
+ 
 }
