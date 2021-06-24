@@ -40,6 +40,11 @@ img {
   margin-right: auto;
   width: 100%;
 }
+img.wallpaper {
+  background: url(./images/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+}
 
 /* Next Block */
 .next-block {

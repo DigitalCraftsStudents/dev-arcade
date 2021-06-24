@@ -17,6 +17,7 @@ const store = createStore(reducers);
 
 function Tetris() {
   return (
+    
     <Provider store={store}>
       <div className="Tetris">
         <header className="App-header">
