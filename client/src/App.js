@@ -6,6 +6,10 @@ import {
   Link
 } from 'react-router-dom';
 
+import {
+  MyChessBoard
+} from './games/chess/ChessApp'
+
 /**
  * Games will be loaded into the Arcade here
  * 
@@ -24,6 +28,7 @@ function App() {
       <nav>
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
+        <Link to="/games/ChessApp.js"></Link>
       </nav>
         <Switch>
           <Route path="/counter">
@@ -31,6 +36,9 @@ function App() {
           </Route>
           <Route path="/ping">
             <Ping />
+          </Route>
+          <Route path="/games/ChessApp.js">
+            <MyChessBoard />
           </Route>
         </Switch>
     </div>
