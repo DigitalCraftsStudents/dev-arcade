@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { moveDown, moveLeft, moveRight, rotate } from "../actions";
 
 function useKey(key, cb) {
-  const callbackRef = useRef(cb);s
+  const callbackRef = useRef(cb);
     useEffect(() => {
       callbackRef.current = cb;
     })
@@ -55,7 +55,7 @@ export default function Controls(props) {
         }
         dispatch(rotate());
       }
-        useKey("Space", handleRotate );
+        useKey("ArrowUp", handleRotate );
       
   
   
