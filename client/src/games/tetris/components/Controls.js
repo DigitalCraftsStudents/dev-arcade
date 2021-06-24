@@ -55,7 +55,7 @@ export default function Controls(props) {
         }
         dispatch(rotate());
       }
-        useKey("ArrowUp", handleRotate );
+        useKey("ArrowDown", handleRotate );
       
   
   
