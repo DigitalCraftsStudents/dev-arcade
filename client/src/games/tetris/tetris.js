@@ -13,6 +13,7 @@ import Controls from "./components/Controls";
 import MessagePopup from "./components/MessagePopup";
 
 
+
 const store = createStore(reducers);
 
 function Tetris() {
@@ -32,6 +33,7 @@ function Tetris() {
         <ScoreBoard />
         <Controls />
         <MessagePopup />
+        
       </div>
     </Provider>
   );

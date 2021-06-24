@@ -49,6 +49,7 @@ img.wallpaper {
 /* Next Block */
 .next-block {
   display: grid;
+  grid-area: l;
   grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
 }
@@ -86,6 +87,8 @@ img.wallpaper {
   background-color: var(--color-0);
   color: #FAEB2C;
 }
+
+
 
 /* Message Popup Styles */
 .message-popup {
