@@ -7,28 +7,28 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { createMuiTheme } from '@material-ui/core';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#1685F8",
-    },
-    secondary: {
-      main: "#E900FF",
-    },
-    accent1: {
-      main: "#FAEB2C",
-    },
-    accent2: {
-      main: "#F52789",
-    },
-    accent3: {
-      main: "#3D144C",
-    },
-    background: {
-      default: "#1685F8",
-    },
-  },
-});
+// const theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       main: "#1685F8",
+//     },
+//     secondary: {
+//       main: "#E900FF",
+//     },
+//     accent1: {
+//       main: "#FAEB2C",
+//     },
+//     accent2: {
+//       main: "#F52789",
+//     },
+//     accent3: {
+//       main: "#3D144C",
+//     },
+//     background: {
+//       default: "#1685F8",
+//     },
+//   },
+// });
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
