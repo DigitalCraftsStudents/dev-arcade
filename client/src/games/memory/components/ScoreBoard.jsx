@@ -8,8 +8,6 @@ import Increment from "../containers/IncrementContainer";
 const ScoreBoard = (props) => (
   <Provider store={store}>
     <div>
-      <div>Username:</div>
-      <div>Score:</div>
       <Output />
       <Increment />
     </div>
