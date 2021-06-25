@@ -10,7 +10,7 @@ function Card(props) {
     }
 
     return (
-        <div className={`card-container ${isClicked ? "clicked" : ""}`} onClick={handleClick}>
+        <div className={`memo-card-container ${isClicked ? "clicked" : ""}`} onClick={handleClick}>
             <h2>This should be a card </h2>
         </div>
     )
