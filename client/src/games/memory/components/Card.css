@@ -1,0 +1,30 @@
+
+.memo-card-container{
+
+    width: 200px;
+    height: 200px;
+    background-color: #E900FF;
+    overflow: hidden;
+    display: inline-flex;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    margin: 10px;
+    border: 4px;
+    border-color: #FAEB2C;
+    
+  }
+
+.clicked{
+  background-color: #3D144C;
+}
+
+.memo-card-container:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+    .memo-card-container {
+      height: 150px;
+      width: 150px;
+    }
+  }
