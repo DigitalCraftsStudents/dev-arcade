@@ -30,31 +30,32 @@ const theme = createMuiTheme({
   },
 });
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(20),
-    fontWeight: theme.typography.fontWeightBold,
-  },
-  content: {
-      fontSize: theme.typography.pxToRem(18),
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     width: '50%',
+//   },
+//   heading: {
+//     fontSize: theme.typography.pxToRem(20),
+//     fontWeight: theme.typography.fontWeightBold,
+//   },
+//   content: {
+//       fontSize: theme.typography.pxToRem(18),
       
-  }
-}));
+//   }
+// }));
 
 export default function SimpleAccordion() {
   // const classes = useStyles();
 
   return (
     <div >
-      <Accordion>
+      <Accordion style= {{width: "50%", textAlign: "center", margin: "auto", color: "#3D144C" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
           style= {{backgroundColor: "#1685F8"}}
+          
         >
           <Typography >How to Play the Game</Typography>
         </AccordionSummary>
