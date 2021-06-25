@@ -25,9 +25,9 @@ class GameBoard extends React.Component {
 
 
                     <div id="pickObject">
-                        <button className="actionBtn" onClick={() => this.selectAction('rock')}>ROCK</button>&nbsp;
-                    <button className="actionBtn" onClick={() => this.selectAction('paper')}>PAPER</button>&nbsp;
-                    <button className="actionBtn" onClick={() => this.selectAction('scissors')}>SCISSORS</button>
+                    <button className="action-btn-1" onClick={() => this.selectAction('rock')}>ROCK</button>&nbsp;
+                    <button className="action-btn-2" onClick={() => this.selectAction('paper')}>PAPER</button>&nbsp;
+                    <button className="action-btn-3" onClick={() => this.selectAction('scissors')}>SCISSORS</button>
                     </div>
                 </div>
             </div>
