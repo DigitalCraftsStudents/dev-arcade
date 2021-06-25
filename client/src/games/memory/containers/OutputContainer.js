@@ -1,11 +1,12 @@
-import Output from '../components/Output';
-import { connect } from 'react-redux';
+import Output from "../components/Output";
+import { connect } from "react-redux";
 
 function mapStateToProps(state) {
-	// Translate Redux state into React props
+  // Translate Redux state into React props
   return {
-    amount: state.count
-  }
+    amount: state.count,
+    username: state.username,
+  };
 
   // this will turn into:
   /**
@@ -16,5 +17,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Output);
-               // returns a function ^
-                                //function(Output);
+// returns a function ^
+//function(Output);
