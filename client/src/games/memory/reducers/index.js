@@ -1,7 +1,12 @@
 import { INCREMENT, DECREMENT, UPDATE } from "../actions";
 
+const defaultState = {
+  count: 0,
+  username: "test",
+};
+
 // Reducer
-export function counter(state, action) {
+export function counter(state = defaultState, action) {
   switch (action.type) {
     case INCREMENT:
       return {
@@ -13,8 +18,10 @@ export function counter(state, action) {
         count: state.count - 1,
       };
     case UPDATE:
+      const { name } = action.payload;
       return {
-        username: "Tested",
+        count: state.count,
+        username: name,
       };
     default:
       return state;

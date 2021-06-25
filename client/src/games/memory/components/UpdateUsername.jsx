@@ -1,10 +1,34 @@
-import React from "react";
+import { React, useState } from "react";
+import { connect } from "react-redux";
+import { actionUpdateUsername } from "../actions";
 
-const UpdateUsername = (props) => (
-  <div>
-    <input type="text" placeholder="Please give a Username" />
-    <button onClick={props.handleClick}>Enter</button>
-  </div>
-);
+const UpdateUsername = ({ actionUpdateUsername }) => {
+  const [userName, setUserName] = useState("");
+  const _handleUserName = (input) => {
+    setUserName(input);
+  };
 
-export default UpdateUsername;
+  const _handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userName);
+    actionUpdateUsername({ name: userName });
+    setUserName("");
+  };
+
+  return (
+    <div>
+      <form onSubmit={(e) => _handleSubmit(e)}>
+        <input
+          name="username-input"
+          type="text"
+          placeholder="Please give a Username"
+          onChange={(e) => _handleUserName(e.target.value)}
+          value={userName}
+        />
+        <button type="submit">Enter</button>
+      </form>
+    </div>
+  );
+};
+
+export default connect(null, { actionUpdateUsername })(UpdateUsername);

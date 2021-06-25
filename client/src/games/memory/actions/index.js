@@ -14,8 +14,9 @@ export function actionDecrement() {
   };
 }
 
-export function actionUpdateUsername() {
+export function actionUpdateUsername({ name }) {
   return {
     type: UPDATE,
+    payload: { name },
   };
 }
