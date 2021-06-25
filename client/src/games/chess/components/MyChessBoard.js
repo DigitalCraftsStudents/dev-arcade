@@ -10,4 +10,4 @@ function MyChessBoard() {
     );
 }
 
-export default MyChessBoard
+export default MyChessBoard;
