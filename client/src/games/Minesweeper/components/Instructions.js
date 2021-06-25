@@ -7,28 +7,31 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { createMuiTheme } from '@material-ui/core';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#1685F8",
-    },
-    secondary: {
-      main: "#E900FF",
-    },
-    accent1: {
-      main: "#FAEB2C",
-    },
-    accent2: {
-      main: "#F52789",
-    },
-    accent3: {
-      main: "#3D144C",
-    },
-    background: {
-      default: "#1685F8",
-    },
-  },
-});
+
+
+
+// const theme = createMuiTheme({
+//   palette: {
+//     primary: {
+//       main: "#1685F8",
+//     },
+//     secondary: {
+//       main: "#E900FF",
+//     },
+//     accent1: {
+//       main: "#FAEB2C",
+//     },
+//     accent2: {
+//       main: "#F52789",
+//     },
+//     accent3: {
+//       main: "#3D144C",
+//     },
+//     background: {
+//       default: "#1685F8",
+//     },
+//   },
+// });
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -49,12 +52,12 @@ export default function SimpleAccordion() {
 
   return (
     <div >
-      <Accordion style= {{width: "50%", textAlign: "center", margin: "auto", color: "#3D144C" }}>
+      <Accordion style= {{width: "30%", textAlign: "center", margin: "auto", color: "#3D144C", fontFamily: "primary-font" }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          style= {{backgroundColor: "#1685F8"}}
+          style= {{backgroundColor: "#1685F8", fontFamily: "primary-font" }}
           
         >
           <Typography >How to Play the Game</Typography>

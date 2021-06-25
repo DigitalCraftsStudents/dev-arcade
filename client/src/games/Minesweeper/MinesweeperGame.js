@@ -16,7 +16,7 @@ function MinesweeperGame() {
       <SignupForm />   
       
       <div className="MinesweeperHeading"> 
-      <h1 style={{color: "#FAEB2C"}}>MineSweeper</h1>
+      <h1 style={{color: "#FAEB2C",fontFamily: "primary-font"}}>MineSweeper</h1>
       <Instructions/>
       </div>
       <div className="timer">

@@ -12,4 +12,11 @@
     padding-bottom: 40px;
   }
  
-  
+  @font-face {
+    font-family: 'primary-font';
+    src: url(../components/IcelandFonts/Iceland-Regular.ttf)
+  }
+
+  .primary-font {
+    font-family: primary-font;
+  }

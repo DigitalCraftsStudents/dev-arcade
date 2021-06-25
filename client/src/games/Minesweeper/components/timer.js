@@ -45,19 +45,19 @@ const App = () => {
 
   return (
     <div className="app">
-      <h3 style={{color: "#E900FF"}}>React Stopwatch</h3>
-      <div className='stopwatch-card'>
+      {/* <h3 style={{color: "#E900FF"}}>React Stopwatch</h3> */}
+      <div className='stopwatch-card' style={{color: "#FAEB2C"}}>
         <p>{formatTime()}</p>
         <div className='buttons'>
           {
             !isActive && !isPaused ?
-              <button onClick={handleStart}>Start</button>
+              <button onClick={handleStart} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Start</button>
               : (
-                isPaused ? <button onClick={handlePause}>Pause</button> :
-                  <button onClick={handleResume}>Resume</button>
+                isPaused ? <button onClick={handlePause} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Pause</button> :
+                  <button onClick={handleResume} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Resume</button>
               )
           }
-          <button onClick={handleReset} disabled={!isActive}>Reset</button>
+          <button onClick={handleReset} disabled={!isActive}style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Reset</button>
         </div>
       </div>
     </div>

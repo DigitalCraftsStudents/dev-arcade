@@ -10,7 +10,7 @@ export default function ScoreBoard(props) {
     return (
         <div className="score-board">
             <div>
-                <h1 style={{color: "#FAEB2C"}}>
+                <h1 style={{color: "#FAEB2C", fontFamily: "primary-font"}}>
                         Score:{ props.score } 
                 </h1>
             </div>
