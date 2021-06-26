@@ -13,10 +13,11 @@ function MinesweeperGame() {
   return (
     <div className="MinesweeperBody">
       <div style={{backgroundImage: `url(${background})`}}></div>
-      <SignupForm />   
+        
       
       <div className="MinesweeperHeading"> 
-      <h1 style={{color: "#FAEB2C",fontFamily: "primary-font"}}>MineSweeper</h1>
+      <h1 style={{color: "#FAEB2C",fontFamily: "primary-font", fontSize: "100px"}}>MineSweeper</h1>
+     <SignupForm /> 
       <Instructions/>
       </div>
       <div className="timer">

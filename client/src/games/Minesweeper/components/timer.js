@@ -46,18 +46,18 @@ const App = () => {
   return (
     <div className="app">
       {/* <h3 style={{color: "#E900FF"}}>React Stopwatch</h3> */}
-      <div className='stopwatch-card' style={{color: "#FAEB2C"}}>
+      <div className='stopwatch-card' style={{color: "#FAEB2C", fontSize: '40px', fontFamily: "primary-font"}}>
         <p>{formatTime()}</p>
         <div className='buttons'>
           {
             !isActive && !isPaused ?
-              <button onClick={handleStart} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Start</button>
+              <button onClick={handleStart} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font", fontSize: '40px', marginRight: "10px"}}>Start</button>
               : (
-                isPaused ? <button onClick={handlePause} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Pause</button> :
-                  <button onClick={handleResume} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Resume</button>
+                isPaused ? <button onClick={handlePause} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font", fontSize: '40px', marginRight: "10px"}}>Pause</button> :
+                  <button onClick={handleResume} style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font", fontSize: '40px', marginRight: "10px"}}>Resume</button>
               )
           }
-          <button onClick={handleReset} disabled={!isActive}style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font"}}>Reset</button>
+          <button onClick={handleReset} disabled={!isActive}style={{backgroundColor: "#E900FF", color: "yellow", fontFamily: "primary-font", fontSize: '40px'}}>Reset</button>
         </div>
       </div>
     </div>

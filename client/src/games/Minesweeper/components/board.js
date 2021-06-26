@@ -63,7 +63,7 @@ function Board() {
     return (
         <div className="parent">
             <div>
-                <h3 style={{color:'white',textAlign:'center',fontSize:'30px',margin:'0px', paddingBottom: '15px', color: '#FAEB2C', fontFamily: 'primary-font'}}>Non-Mines - {nonMinecount}</h3>
+                <h3 style={{color:'white',textAlign:'center',fontSize:'30px',margin:'0px', paddingBottom: '15px', color: '#FAEB2C', fontFamily: 'primary-font', fontSize: '40px'}}>Non-Mines - {nonMinecount}</h3>
                 <ToastContainer></ToastContainer>
                 {grid.map((singlerow,index1)=>{
                     return (
