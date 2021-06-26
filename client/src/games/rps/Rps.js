@@ -33,7 +33,6 @@ function Rps() {
           Paper wins against rock.</p>
         </Popup>
         <GameBoard />
-        <Reset />
         <Footer />
       </div>
     </Provider>

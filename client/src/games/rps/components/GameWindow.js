@@ -1,5 +1,6 @@
 import React from "react";
 import Player from "./Player";
+import Reset from './Reset'
 import { connect } from "react-redux";
 import { actionIncrement } from "../actions";
 import "./GameWindow.css";
@@ -11,12 +12,13 @@ class GameWindow extends React.Component {
     super(props);
     this.state = {
       playerOne: actions[1],
-      aiPlayer: actions[Math.floor(Math.random() * actions.length)],
+      aiPlayer: actions[1],
     };
   }
 
   selectAction = (selection) => {
     document.getElementById('pickObject').style.display = 'none'
+    document.getElementById('resetDiv').style.display = 'flex'
     this.setState({
       playerOne: selection,
       aiPlayer: actions[Math.floor(Math.random() * actions.length)],
@@ -42,6 +44,13 @@ class GameWindow extends React.Component {
       this.props.increaseScore();
     }
   };
+
+  resetClick = () => {
+    document.getElementById('pickObject').style.display = 'flex'
+    document.getElementById("player_one").style.display = "none";
+    document.getElementById("ai_player").style.display = "none";
+    document.getElementById('resetDiv').style.display = 'none'
+  }
 
   render() {
     const { playerOne, aiPlayer } = this.state;
@@ -75,6 +84,7 @@ class GameWindow extends React.Component {
               SCISSORS
             </button>
           </div>
+          <Reset onClick={() => {this.resetClick()}}/>
         </div>
       </div>
     );
