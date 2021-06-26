@@ -1,0 +1,13 @@
+.actionButton{
+    background-color: #222;
+border: 1px solid rgb(158, 83, 201);
+  font-size: small;
+  padding: 1px;
+ 
+}
+
+#pickObject{
+display: flex;
+/* height: 800px; */
+
+}
