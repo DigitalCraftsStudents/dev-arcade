@@ -1,7 +1,7 @@
 import React from "react";
 import Player from "./Player";
 import { connect } from "react-redux";
-import { actionIncrement } from '../actions';
+import { actionIncrement } from "../actions";
 import "./GameWindow.css";
 
 const actions = ["rock", "paper", "scissors"];
@@ -15,33 +15,32 @@ class GameWindow extends React.Component {
     };
   }
 
-  comparePlayers = () => {
-    const p1 = this.state.playerOne
-    const ai = this.state.aiPlayer
-    console.log(p1, ai)
-    console.log(this.props);
-    if (p1 === 'rock' && ai === 'scissors') {
-        this.props.increaseScore()
-    } else if (p1 === 'paper' && ai === 'rock') {
-        this.props.increaseScore()
-    } else if (p1 === 'scissors' && ai === 'paper') {
-        this.props.increaseScore()
-    }
+  selectAction = (selection) => {
+    document.getElementById('pickObject').style.display = 'none'
+    this.setState({
+      playerOne: selection,
+      aiPlayer: actions[Math.floor(Math.random() * actions.length)],
+    });
+    setTimeout(this.determineWinner, 1000);
   };
 
   determineWinner = () => {
     console.log(this.state.playerOne, this.state.aiPlayer);
     document.getElementById("player_one").style.display = "inline";
     document.getElementById("ai_player").style.display = "inline";
-    this.comparePlayers()
+    this.comparePlayers();
   };
 
-  selectAction = (actions) => {
-    this.setState({
-      playerOne: actions,
-    });
-
-    setTimeout(this.determineWinner, 1000);
+  comparePlayers = () => {
+    const p1 = this.state.playerOne;
+    const ai = this.state.aiPlayer;
+    if (p1 === "rock" && ai === "scissors") {
+      this.props.increaseScore();
+    } else if (p1 === "paper" && ai === "rock") {
+      this.props.increaseScore();
+    } else if (p1 === "scissors" && ai === "paper") {
+      this.props.increaseScore();
+    }
   };
 
   render() {
@@ -83,10 +82,10 @@ class GameWindow extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {
-        count: state.count
-    }
-}
+  return {
+    count: state.count,
+  };
+};
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -98,4 +97,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 // export default GameBoard;
-export default connect(mapStateToProps, mapDispatchToProps)(GameWindow)
+export default connect(mapStateToProps, mapDispatchToProps)(GameWindow);

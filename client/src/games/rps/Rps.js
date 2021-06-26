@@ -20,8 +20,6 @@ function Rps() {
       <div className="undo_text_align rps_body">
         <Header />
         <Score />
-        {/* <Increment /> */}
-        <Instructions/>
         <main>
         <button onClick={() => setButtonPopup(true)}>How to Play</button>
         </main>
