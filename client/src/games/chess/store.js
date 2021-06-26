@@ -1,9 +1,5 @@
 import { createStore } from 'redux';
 import { counter } from './reducers';
-// Default state
-const defaultState = {
-	count1: 0,
-	count2: 0
-};
 
-export const store = createStore(counter, defaultState);
+export const store = createStore(counter, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+

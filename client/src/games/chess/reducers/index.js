@@ -1,26 +1,45 @@
 import {
-	INCREMENT,
+	PLAYER1, PLAYER2,
 } from '../actions';
 
-// Reducer 
-export function counter1(state1, action1) {
-	switch(action1.type) {
-		case INCREMENT:
-			return {
-				count: state1.count1 + 1
-			}
-        default:
-            return state1;
-	}
-}
+const defaultState = {
 
-export function counter2(state2, action2) {
-	switch(action2.type) {
-		case INCREMENT:
+	players: {
+		player1:{
+			name: "",
+			score:0,
+		},
+		player2:{
+			name: "",
+			score:0,
+		}
+	}
+};
+
+
+
+// Reducer 
+export function playerReducer(state=defaultState, action) {
+	switch(action.type) {
+		case PLAYER1: {
+			const{name,score} = action.payload
 			return {
-				count2: state2.count2 + 1
+				players: {
+					...state.players,
+					player1: {name,score}
+				}
+			};
+		}
+		case PLAYER2: {
+			const{name,score} = action.payload
+			return {
+				players: {
+					...state.players,
+					player2: {name,score}
+					}
+				}
 			}
         default:
-            return state2;
+            return state;
 	}
 }
