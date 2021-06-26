@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Card from "./Card";
-
+import Card from "./Card.jsx";
+import styled from "styled-components";
 
 function Board() {
+  const Grid= styled.div` 
+  display: "grid";
+  font-family: 'Courier New', Courier, monospace;
 
   const possibleCardFaces = ["&#x1F602;", "&#x1F60E;", "&#x1F60D;", "&#x1F61C;", "&#x1F643;", "&#x1F913;", "&#x1F602;", "&#x1F60E;", "&#x1F60D;", "&#x1F61C;", "&#x1F643;", "&#x1F913;"];
-
 
   const shuffle = (array = []) => {
     let randIndex;
@@ -23,7 +26,7 @@ function Board() {
 
   return (
     <div style={{ background: "green" }}>
-
+     <Grid>
     {shuffledCards.map((face, index) => {
       return (
         <Card 
@@ -32,30 +35,8 @@ function Board() {
         face={face}
         />
       )
+     </Grid>
     })}
-
-      {/* <div className="mdc-layout-grid">
-        <div className="mdc-layout-grid__inner">
-          <div className="mdc-layout-grid__cell">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </div>
-          <div className="mdc-layout-grid__cell">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </div>
-          <div className="mdc-layout-grid__cell">
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

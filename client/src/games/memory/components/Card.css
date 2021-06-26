@@ -1,52 +1,33 @@
 
-.card-container{
+
+.memo-card-container{
+
     width: 200px;
-    height: 150px;
-    border: black 2px;
-    background-color: orange;
+    height: 200px;
+    background-color: #E900FF;
     overflow: hidden;
     display: inline-flex;
-}
-.clicked{
-  background-color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    margin: 10px;
+    border: 4px;
+    border-color: #FAEB2C;
+    
+  }
+
+.clicked {
+  background-color: #3d144c;
 }
 
 
-.card-container:hover {
+.memo-card-container:hover {
     transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
-    .card-container {
+    .memo-card-container {
       height: 150px;
       width: 150px;
     }
   }
-/* holding the below for the actual cards later 
-  */
-  span.a {
-    display: inline; /* the default for span */
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid blue;  
-    background-color: yellow; 
-  }
-  
-  span.b {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid blue;    
-    background-color: yellow; 
-  }
-  
-  span.c {
-    display: block;
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid blue;    
-    background-color: yellow; 
-  }
+
