@@ -3,10 +3,12 @@ require('dotenv').config();    // don't forget to require dotenv
 const http = require('http');
 const express = require('express');
 const morgan = require('morgan');
+const pgp = require('pg-promise')();
 const helmet = require('helmet');
 const es6Renderer = require('express-es6-template-engine');
 
 const session = require('express-session');
+const { brotliDecompress } = require('zlib');
 const FileStore = require('session-file-store')(session);
 
 
@@ -25,7 +27,7 @@ app.set('view engine', 'html');
 app.use(session({
     // store: new FileStore({logFn: function(){}}),  // no options for now
     store: new FileStore(),  // no options for now
-    secret: process.env.SESSION_SECRET,
+    secret: 'secret',
     saveUninitialized: false,
     resave: true,
     rolling: true,
@@ -33,6 +35,19 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 }));
+
+const cn = {
+    host: 'localhost',
+    port: 5432,
+    database: 'web_pt_01_21',
+    user: 'lbrazil',
+    password: 'postgres',
+    max: 30 // use up to 30 connections
+
+    // "types" - in case you want to set custom type parsers on the pool level
+};
+
+const db = pgp(cn);
 
 app.use(logger);
 // Disabling for local development
@@ -49,6 +64,44 @@ app.get('/api', (req, res) => {
 app.get('/api/ping', (req, res) => {
     res.json('pong')
 })
+
+app.get('/highscores/:game', (req, res) => {
+    const game = req.params.game;
+    console.log(game);
+
+    try {
+        db.any('SELECT * FROM highscores WHERE game = $1', [game])
+        .then((data) => {
+            res.json(data);
+        }).catch((error) => {
+            console.log("GET HIGHSCORES ERROR", error)
+        })
+    }
+    catch(error) {
+        console.log(error)
+    }
+    
+})
+
+app.post('/newscore', (req, res) => {
+    const first_name = req.body.first_name;
+    const last_name = req.body.last_name;
+    const score = parseInt(req.body.score);
+    const game = req.body.game;
+    try {
+        db.none("INSERT INTO highscores(first_name, last_name, score, game) VALUES($1, $2, $3, $4)", [first_name, last_name, score, game])
+        .then(() => {
+            res.json('SUCCESS!')
+        }).catch((error) => {
+            console.log("POST SCORE ERROR", error)
+        })
+    }
+    catch (error) {
+        console.log(error)
+    }
+});
+
+
 
 server.listen(PORT, HOST, () => {
     console.log(`Listening at http://${HOST}:${PORT}`);
