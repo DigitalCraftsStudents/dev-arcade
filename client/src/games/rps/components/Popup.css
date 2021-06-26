@@ -14,6 +14,8 @@
 
 .popup-inner {
     position: relative;
+    margin: 15% auto;
+    border: 3px solid rgb(125, 198, 247);
     padding: 32px;
     width: 100%;
     max-width: 640px;
@@ -26,6 +28,12 @@
     position: absolute;
     top: 16px;
     right: 16px;
+    font-size: 23px;
+    font-weight: bold;
+    background-color:darkblue ;
+    color:paleturquoise;
+    text-decoration: none;
+    cursor: pointer;
 
 
 

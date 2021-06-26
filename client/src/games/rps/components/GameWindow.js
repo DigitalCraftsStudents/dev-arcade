@@ -56,21 +56,21 @@ class GameWindow extends React.Component {
           <Player id="ai_player" actions={aiPlayer} />
           <div id="pickObject">
             <button
-              className="actionBtn"
+              className="action-btn-1"
               onClick={() => this.selectAction("rock")}
             >
               ROCK
             </button>
             &nbsp;
             <button
-              className="actionBtn"
+              className="action-btn-2"
               onClick={() => this.selectAction("paper")}
             >
               PAPER
             </button>
             &nbsp;
             <button
-              className="actionBtn"
+              className="action-btn-3"
               onClick={() => this.selectAction("scissors")}
             >
               SCISSORS
