@@ -1,20 +1,26 @@
 import {
 	INCREMENT,
-	DECREMENT
 } from '../actions';
 
 // Reducer 
-export function counter(state, action) {
-	switch(action.type) {
+export function counter1(state1, action1) {
+	switch(action1.type) {
 		case INCREMENT:
 			return {
-				count: state.count + 1
-			}
-		case DECREMENT:
-			return {
-				count: state.count - 1
+				count: state1.count1 + 1
 			}
         default:
-            return state;
+            return state1;
+	}
+}
+
+export function counter2(state2, action2) {
+	switch(action2.type) {
+		case INCREMENT:
+			return {
+				count2: state2.count2 + 1
+			}
+        default:
+            return state2;
 	}
 }
