@@ -5,7 +5,6 @@ import Instructions from "./components/Instructions";
 import Popup from "./components/Popup";
 import Reset from "./components/Reset";
 import Score from "./containers/ScoreContainer";
-import Increment from './containers/IncrementContainer'
 import "./Rps.css";
 
 import React from "react";
@@ -21,7 +20,7 @@ function Rps() {
       <div className="undo_text_align rps_body">
         <Header />
         <Score />
-        <Increment />
+        {/* <Increment /> */}
         <Instructions/>
         <main>
         <button onClick={() => setButtonPopup(true)}>How to Play</button>
