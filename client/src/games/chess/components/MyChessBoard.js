@@ -2,6 +2,8 @@
 import ChessBoard from 'chessboardjsx';
 import React, {useState, useEffect, useRef} from 'react';
 import Chess from "chess.js"
+import store from "../store";
+import { Provider } from 'react-redux';
 // This is App.js from video
 const container = {
     marginTop: "2rem",
@@ -32,7 +34,9 @@ function MyChessBoard() {
         setFen("start")
     }
     return (
+    <Provider store={store}>
       <>
+      {/* <scoreboard/> */}
         {
             game.current && game.current.game_over() ? <div style = {{textAlign: "center"}}><h1>Game Over</h1><button onClick = {resetGame} >Play Again</button></div>: <span></span> 
         }
@@ -41,6 +45,9 @@ function MyChessBoard() {
 onDrop = {onDrop}/>
 </div>
     </>
+    </Provider>
 );
 };
+
+
 export default MyChessBoard;
