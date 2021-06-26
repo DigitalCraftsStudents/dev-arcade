@@ -15,8 +15,12 @@
     
   }
 
-.clicked {
+.memo-clicked {
   background-color: #3d144c;
+}
+
+.memo-hidden{
+  visibility: hidden;
 }
 
 
