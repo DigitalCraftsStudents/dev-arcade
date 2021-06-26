@@ -7,6 +7,8 @@ import {
   RESUME,
   RESTART,
   GAME_OVER,
+  USERNAME,
+  SCORE
 } from "../actions";
 
 import {
@@ -78,6 +80,10 @@ const gameReducer = (state = defaultState(), action) => {
       newState.score = score + checkRows(newGrid);
 
       return newState;
+
+    case USERNAME:
+      const {name} = action.payload
+      return {...state, name};
 
     case RESUME:
       return { ...state, isRunning: true };

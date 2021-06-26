@@ -1,15 +1,11 @@
 import { createStore } from "redux";
+import rootReducer from "./reducers/index"
 
-const defaultState = {
-    state = {
-  game: {
-    nextShape: `grid-square color-${props.color}`,
-    rotation: 1,
-    grid: [bunch, of, values],
-    more, properties
-  }
-}
 
-};
 
-export const store = createStore(defaultStatus);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+export default store
