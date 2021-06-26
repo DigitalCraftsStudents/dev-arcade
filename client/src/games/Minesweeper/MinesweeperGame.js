@@ -1,16 +1,18 @@
 import React from 'react';
 import Board from './components/Board';
-import App from './components/timer';
 import SignupForm from './components/SignupForm';
 import ScoreBoard from './components/ScoreBoard';
 import Instructions from './components/Instructions';
 import '../Minesweeper/css/Minesweeper.css';
 import background from "../Minesweeper/css/images/pink-city.jpeg";
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 
 function MinesweeperGame() {
   return (
+    <Provider store={store}>
     <div className="MinesweeperBody">
       <div style={{backgroundImage: `url(${background})`}}></div>
         
@@ -21,7 +23,6 @@ function MinesweeperGame() {
       <Instructions/>
       </div>
       <div className="timer">
-      <App />
       <ScoreBoard/>
       </div>
       <div className="aligned">   
@@ -29,6 +30,7 @@ function MinesweeperGame() {
         
       </div>
     </div>
+    </Provider>
   );
 }
 
