@@ -1,7 +1,9 @@
-function Reset() {
+import './Reset.css'
+
+function Reset(props) {
     return(
         <div id="resetDiv">
-            <button id="reset">Reset</button>
+            <button id="reset" onClick={props.onClick}>Reset</button>
         </div>
     )
 
