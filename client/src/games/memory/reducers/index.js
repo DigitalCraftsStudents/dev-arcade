@@ -2,7 +2,7 @@ import { INCREMENT, DECREMENT, UPDATE } from "../actions";
 
 const defaultState = {
   count: 0,
-  username: "test",
+  username: "",
 };
 
 // Reducer
