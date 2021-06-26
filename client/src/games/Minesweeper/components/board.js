@@ -22,8 +22,8 @@ function Board() {
 
     // Making freshboard at start
     const freshBoard = () => {
-        const newBoard=CreateBoard(10,10,20);
-        setNonMinecount(10*10-20);
+        const newBoard=CreateBoard(6,6,5);
+        setNonMinecount(6*6-5);
         setmineLocation(newBoard.mineLocation);
         setGrid(newBoard.board);
     }
@@ -46,11 +46,11 @@ function Board() {
                 newGrid[mineLocation[i][0]][mineLocation[i][1]].revealed=true;
             }
             setGrid(newGrid);
-            setTimeout(newfresh,500);
+            setTimeout(newfresh,3000);
         }
         if(nonMinecount===0){
             toast.success('Wohoo!!,You won',{ position: "top-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, });
-            setTimeout(newfresh,500);
+            setTimeout(newfresh,3000);
         }
         else{
             let revealedboard=revealed(newGrid,x,y,nonMinecount);

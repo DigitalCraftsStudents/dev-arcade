@@ -1,19 +1,18 @@
-import { createStore, applyMiddleware } from 'redux';
-import reducers from '../reducers/index';
+import { createStore } from 'redux';
+import rootReducer from './reducers/playerReducer';
 
 
-const saveToLocalstorageMiddleware = store => next => action => {
-	next(action);
+// const saveToLocalstorageMiddleware = store => next => action => {
+// 	next(action);
   	
-  	if(action.type !== 'PUT_SCORE') return;
+//   	if(action.type !== 'PUT_SCORE') return;
   	
-  	let topList = store.getState().scoreboard.scores;
-  	localStorage.setItem("scores", JSON.stringify(topList));
-}
+//   	let topList = store.getState().scoreboard.scores;
+//   	localStorage.setItem("scores", JSON.stringify(topList));
+// }
 
 const store = createStore(
-    reducers,
-    applyMiddleware(saveToLocalstorageMiddleware),
+    rootReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
