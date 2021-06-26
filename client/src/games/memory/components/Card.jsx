@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Emoji from './Emoji'
 import './Card.css';
 
 function Card(props) {
@@ -12,7 +11,7 @@ function Card(props) {
 
     return (
         <div className={`card-container ${isClicked ? "clicked" : ""}`} onClick={handleClick}>
-            <Emoji emoji={props.emoji} />
+        <h1>{props.face}</h1>
         </div>
     )
 }
