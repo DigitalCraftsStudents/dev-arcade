@@ -2,10 +2,11 @@ import Score from '../components/Score';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
-	// Translate Redux state into React props
+    // Translate Redux state into React props
 
     return {
-        amount: state.count
+        amount: state.count,
+        moves: state.moves
     }
 }
 

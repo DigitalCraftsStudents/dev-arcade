@@ -62,7 +62,7 @@
 #board {
   margin: auto;
   width: 800px;
-  height: 400px;
+  height: 550px;
   border: 1px solid;
   color: rgb(167, 105, 209);
 }
@@ -116,10 +116,11 @@
 
 #score {
   margin: auto;
-  width: 100px;
+  width: 100%;
   height: 50px;
   text-align: center;
   color: teal;
+  padding-bottom: 20px;
 }
 
 #footer {
@@ -142,7 +143,7 @@
 #window {
   margin: auto;
   width: 785px;
-  height: 350px;
+  height: 500px;
   border: 1px solid rgb(158, 83, 201);
 }
 
@@ -167,7 +168,8 @@
 }
 
 .action{
-  height: 70%;
-  
- 
+  height: 35%;
+
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');

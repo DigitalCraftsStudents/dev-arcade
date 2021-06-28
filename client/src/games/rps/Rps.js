@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import GameBoard from "./components/GameWindow";
 import Header from "./components/Header";
-import Instructions from "./components/Instructions";
+// import Instructions from "./components/Instructions";
 import Popup from "./components/Popup";
 import Reset from "./components/Reset";
 import Score from "./containers/ScoreContainer";
@@ -15,16 +15,14 @@ import { useState } from 'react';
 
 
 function Rps() {
-  const [buttonPopup, setButtonPopup]= useState(false);
+  const [buttonPopup, setButtonPopup]=useState(false);
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
         <Header />
         <Score />
-        {/* <Increment /> */}
-        <Instructions/>
         <main>
-        <button onClick={() => setButtonPopup(true)}>How to Play</button>
+          <button onClick={() => setButtonPopup(true)}>How to Play</button>
         </main>
 
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
@@ -36,7 +34,6 @@ function Rps() {
           Paper wins against rock.</p>
         </Popup>
         <GameBoard />
-        <Reset />
         <Footer />
       </div>
     </Provider>
