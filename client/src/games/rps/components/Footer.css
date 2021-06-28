@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 #footer .celi {
-    width: 75px;
+    width: 65px;
     height: 75px;
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;

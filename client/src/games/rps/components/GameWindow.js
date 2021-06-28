@@ -3,6 +3,7 @@ import Player from "./Player";
 import { connect } from "react-redux";
 import { actionIncrement } from '../actions';
 import "./GameWindow.css";
+import Versus from "./Versus";
 
 const actions = ["rock", "paper", "scissors"];
 
