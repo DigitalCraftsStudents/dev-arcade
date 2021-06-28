@@ -4,6 +4,7 @@ import Reset from './Reset'
 import { connect } from "react-redux";
 import { actionIncrement, actionDecrement, actionIncreaseMove } from "../actions";
 import "./GameWindow.css";
+import Versus from "./Versus";
 
 const actions=["rock", "paper", "scissors"];
 
