@@ -1,6 +1,6 @@
 #footer .celi {
     width: 75px;
-    height: 75px;
+    height: 80px;
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 
@@ -52,4 +52,8 @@
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+#footer{
+	padding-top: 120px;
 }
