@@ -94,6 +94,7 @@ class GameWindow extends React.Component {
               className="action-btn-1"
               onClick={() => this.selectAction("rock")}
             >
+              <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png"/>
               ROCK
             </button>
             &nbsp;
@@ -101,6 +102,7 @@ class GameWindow extends React.Component {
               className="action-btn-2"
               onClick={() => this.selectAction("paper")}
             >
+              <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png"/>
               PAPER
             </button>
             &nbsp;
@@ -108,6 +110,7 @@ class GameWindow extends React.Component {
               className="action-btn-3"
               onClick={() => this.selectAction("scissors")}
             >
+              <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png"/>
               SCISSORS
             </button>
           </div>
