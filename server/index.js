@@ -14,6 +14,7 @@ const FileStore = require('session-file-store')(session);
 
 const app = express();
 const server = http.createServer(app);
+const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
@@ -23,6 +24,8 @@ const logger = morgan('tiny');
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
     // store: new FileStore({logFn: function(){}}),  // no options for now
@@ -101,7 +104,9 @@ app.post('/newscore', (req, res) => {
     }
 });
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/public/index.html'));
+  }); 
 
 server.listen(PORT, HOST, () => {
     console.log(`Listening at http://${HOST}:${PORT}`);
