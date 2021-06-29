@@ -23,6 +23,7 @@ function MyChessBoard() {
         setFen(game.current.fen())
         console.log(move)
     };
+    
     useEffect(() =>{
         game.current = new Chess();
     },[])
