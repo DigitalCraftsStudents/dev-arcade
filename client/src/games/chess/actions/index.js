@@ -1,14 +1,24 @@
-export const INCREMENT = 'increment';
-export const DECREMENT = 'decrement';
+export const PLAYER1 = 'PLAYER1';
+export const PLAYER2 = 'PLAYER2';
 
-export function actionIncrement() {
+export function actionPlayer1({name, score}) {
   return {
-    type: INCREMENT
+    type: PLAYER1,
+    payload: {
+      name,
+      score
+    }
   };
 }
 
-export function actionDecrement() {
+
+export function actionPlayer2({name, score}) {
   return {
-    type: DECREMENT
+    type: PLAYER2,
+    payload: {
+      name,
+      score
+    }
   };
 }
+
