@@ -64,8 +64,8 @@
 /* #board {
   margin: auto;
   width: 800px;
-  height: 400px;
-  border: 1px solid;
+  height: 550px;
+  border: 2px solid;
   color: rgb(167, 105, 209);
 } */
 
@@ -109,8 +109,14 @@
   background: #e93479;
 } */
 
+
 /* #resetDiv {
   display: flex;
+}
+#resetDiv {
+display: flex;
+  display: none;
+ display: flex;
   justify-content: center;
   align-items: center;
   height: 200px;
@@ -118,11 +124,16 @@
 
 /* #score {
   margin: auto;
-  width: 100px;
+  width: 100%;
   height: 50px;
   text-align: center;
   color: teal;
+
+  padding-bottom: 20px;
+
 } */
+
+
 
 /* #footer {
   text-align: center;
@@ -144,12 +155,12 @@
 #window {
   margin: auto;
   width: 785px;
-  height: 350px;
-  border: 1px solid rgb(158, 83, 201);
+  height: 500px;
+  border: 2px solid rgb(158, 83, 201);
 }
 
 .actionBtn {
-  border: 1px solid rgb(158, 83, 201);
+  border: 2px solid rgb(158, 83, 201);
   font-size: small;
   padding: 1px;
 }
@@ -164,12 +175,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgb(145, 102, 173);
+  border-top: 2px solid rgb(145, 102, 173);
   height: 90px;
 }
 
 .action{
+
   height: 70%;
-  
+  height: 35%;
  
 } */ 
+
+
+h3{
+  color: #fff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+	letter-spacing: 5px;
+}
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+@import url('https://icons8.com/icon/nriB7d30z6Rq/barber-scissors');
+
+@import url('https://icons8.com/icon/77722/rock');
+
+@import url('https://icons8.com/icon/77781/paper');
+
+.icons {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+

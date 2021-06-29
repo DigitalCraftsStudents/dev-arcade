@@ -7,8 +7,10 @@ function Score(props) {
     return (
 
         <div id="score">
-            {/* <h2>3 : 2</h2> */}
-            <p>{props.amount}</p>
+            <h2>Username</h2>
+            <span>Score : {props.amount}</span> <span>Moves : {props.moves}</span>
+
+
         </div>
 
     )

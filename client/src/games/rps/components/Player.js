@@ -5,19 +5,30 @@ import rock from "./images/rock.png";
 import './Player.css'
 
 
-const Player=({ actions }) => {
-    return (
 
-        <span>
-            <img className="action" src={
-                actions==="rock"? rock:actions==="paper"? paper:scissors
-            } alt={
-                actions==="rock"? "rock":actions==="paper"? "paper":"scissors"
-            } id="rps_action"></img>
+const Player = (props) => {
+  return (
+    <span id={props.id}>
+      <img
+        className="action"
+        src={
+          props.actions === "rock"
+            ? rock
+            : props.actions === "paper"
+            ? paper
+            : scissors
+        }
+        alt={
+          props.actions === "rock"
+            ? "rock"
+            : props.actions === "paper"
+            ? "paper"
+            : "scissors"
+        }
+      ></img>
+    </span>
+  );
+};
 
-        </span>
+export default Player;
 
-    )
-}
-
-export default Player

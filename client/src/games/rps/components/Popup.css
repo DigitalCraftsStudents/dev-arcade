@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 .popup {
     position: fixed;
     top: 0;
@@ -14,6 +16,8 @@
 
 .popup-inner {
     position: relative;
+    margin: 15% auto;
+    border: 3px solid rgb(125, 198, 247);
     padding: 32px;
     width: 100%;
     max-width: 640px;
@@ -26,7 +30,16 @@
     position: absolute;
     top: 16px;
     right: 16px;
-
-
-
+    font-size: 23px;
+    font-weight: bold;
+    background-color:darkblue ;
+    color:paleturquoise;
+    text-decoration: none;
+    cursor: pointer;
 }
+
+@import url('https://icons8.com/icon/nriB7d30z6Rq/barber-scissors');
+
+@import url('https://icons8.com/icon/77722/rock');
+
+@import url('https://icons8.com/icon/77781/paper');

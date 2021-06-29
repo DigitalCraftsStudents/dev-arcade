@@ -1,3 +1,4 @@
+
 #reset {
     width: 100px;
     align-items: center;
@@ -28,3 +29,8 @@
   #reset:hover {
     background: #e93479;
   }
+
+#resetDiv {
+    display: none;
+}
+

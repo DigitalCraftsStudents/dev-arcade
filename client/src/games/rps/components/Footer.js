@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styled from 'styled-components';
 
@@ -11,15 +12,21 @@ width: 100%;
 border-top: 1px solid #222;
 background-color: #222;`
 
+
+
+import myr from '../components/images/myr.png';
+import celi from '../components/images/celi.png';
+import skyler from '../components/images/skyler.png';
+import './Footer.css'
+
 function Footer() {
-    return (
-        <FooterDiv>
-            <div id='footer'>
-                <a href="https://github.com/sriveragithub" target="_blank"> <img src="https://lh3.googleusercontent.com/proxy/aqsCIffSQGUXC84WmBVJ8oXljuae287F_8kZLHBrR7k0heIc4o1sAU8zUWzUZ9ufacKWhQmF36pgbXzKNEXJzQfqSLICL-UL"></img> </a>
-                <a href="https://github.com/csolis1" target="_blank"> <img src="https://lh3.googleusercontent.com/proxy/aqsCIffSQGUXC84WmBVJ8oXljuae287F_8kZLHBrR7k0heIc4o1sAU8zUWzUZ9ufacKWhQmF36pgbXzKNEXJzQfqSLICL-UL"></img> </a>
-                <a href="https://github.com/myrriame" target="_blank"> <img src="https://lh3.googleusercontent.com/proxy/aqsCIffSQGUXC84WmBVJ8oXljuae287F_8kZLHBrR7k0heIc4o1sAU8zUWzUZ9ufacKWhQmF36pgbXzKNEXJzQfqSLICL-UL"></img> </a>
-            </div>
-        </FooterDiv>
+    return(
+        <div id='footer'>
+            <a href="https://github.com/sriveragithub" target="_blank">Skyler<img className="skyler" src={skyler}></img> </a>
+            <a href="https://github.com/csolis1" target="_blank">Celida<img className="celi" src={celi}></img> </a>
+            <a href="https://github.com/myrriame" target="_blank">Myrriame<img className="myr" src={myr}></img> </a>
+        </div>
+
     )
 
 }

@@ -1,14 +1,20 @@
-export const INCREMENT = "increment";
-export const DECREMENT = "decrement";
+export const INCREMENT="increment";
+export const DECREMENT="decrement";
+export const INCREASEMOVE="increasemove";
 
 export function actionIncrement() {
   return {
-    type: INCREMENT,
+    type: INCREMENT
+  };
+}
+export function actionDecrement() {
+  return {
+    type: DECREMENT
   };
 }
 
-export function actionDecrement() {
+export function actionIncreaseMove() {
   return {
-    type: DECREMENT,
+    type: INCREASEMOVE
   };
 }

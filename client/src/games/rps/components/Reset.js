@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styled from 'styled-components';
 import './Reset.css'
@@ -9,16 +10,15 @@ align-items: center;
 height: 200px;`
 
 
-function Reset() {
-    return (
 
-        <ResetDiv>
-            <div id="resetDiv">
 
-                <button id="reset">Reset</button>
-
-            </div>
-        </ResetDiv>
+function Reset(props) {
+    return(
+       <ResetDiv>
+        <div id="resetDiv">
+            <button id="reset" onClick={props.onClick}>Reset</button>
+        </div>
+  </ResetDiv>
 
     )
 
