@@ -14,6 +14,7 @@ const FileStore = require('session-file-store')(session);
 
 const app = express();
 const server = http.createServer(app);
+const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
@@ -23,6 +24,8 @@ const logger = morgan('tiny');
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
+
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
     // store: new FileStore({logFn: function(){}}),  // no options for now
@@ -37,11 +40,11 @@ app.use(session({
 }));
 
 const cn = {
-    host: 'localhost',
-    port: 5432,
-    database: 'web_pt_01_21',
-    user: 'lbrazil',
-    password: 'postgres',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     max: 30 // use up to 30 connections
 
     // "types" - in case you want to set custom type parsers on the pool level
@@ -84,12 +87,11 @@ app.get('/highscores/:game', (req, res) => {
 })
 
 app.post('/newscore', (req, res) => {
-    const first_name = req.body.first_name;
-    const last_name = req.body.last_name;
+    const username = req.body.username
     const score = parseInt(req.body.score);
     const game = req.body.game;
     try {
-        db.none("INSERT INTO highscores(first_name, last_name, score, game) VALUES($1, $2, $3, $4)", [first_name, last_name, score, game])
+        db.none("INSERT INTO highscores(username, score, game) VALUES($1, $2, $3)", [username, score, game])
         .then(() => {
             res.json('SUCCESS!')
         }).catch((error) => {
@@ -101,7 +103,9 @@ app.post('/newscore', (req, res) => {
     }
 });
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/public/index.html'));
+  }); 
 
 server.listen(PORT, HOST, () => {
     console.log(`Listening at http://${HOST}:${PORT}`);
