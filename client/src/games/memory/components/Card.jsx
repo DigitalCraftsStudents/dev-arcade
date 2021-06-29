@@ -8,8 +8,8 @@ function Card(props) {
     }
 
     return (
-        <div className={`memo-card-container ${props.isClicked ? "memo-clicked" : ""}`} onClick={handleClick}>
-            <h1 className={`memo-card-face ${props.isClicked ? "" : "memo-hidden"}`} name={props.face}>{props.face}</h1>
+        <div className={`memo-card-container ${props.isClicked ? "memo-clicked" : ""} ${props.isCleared ? "memo-hidden" : ""}`} onClick={handleClick}>
+            <h1 className={`memo-card-face ${props.isClicked ? "" : "memo-hidden"} ${props.isCleared ? "memo-hidden" : ""}`} name={props.face}>{props.face}</h1>
         </div>
     )
 }

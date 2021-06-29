@@ -35,10 +35,11 @@ font-family: 'Courier New', Courier, monospace;
       setSelectedCards([]);
       return;
     }
-      timeout.current = setTimeout(() => {
-        setSelectedCards([]);
-      }, 600);
+    timeout.current = setTimeout(() => {
+      setSelectedCards([]);
+    }, 600);
   }
+  console.log(clearedCards);
 
   function handleClick(index) {
     // have max of 2 selected cards
@@ -53,14 +54,30 @@ font-family: 'Courier New', Courier, monospace;
   }
 
   useEffect(() => {
-    if (selectedCards.length === 2 && shuffledCards[selectedCards[0]] !== shuffledCards[selectedCards[1]]) {
+    if (selectedCards.length === 2) {
       setTimeout(evaluate, 600)
     }
+    console.log(clearedCards);
   }, [selectedCards])
 
   const checkIsFlipped = (index) => {
     return selectedCards.includes(index)
   }
+
+  const checkIsCleared = (face) => {
+    return Boolean(clearedCards[face]);
+  };
+
+  const checkCompletion = () => {
+    // We are storing clearedCards as an object since its more efficient to search in an object instead of an array
+    if (Object.keys(clearedCards).length === possibleCardFaces.length / 2) {
+      console.log("you win!");
+    }
+  }
+
+  useEffect(() => {
+    checkCompletion();
+  }, [clearedCards])
 
   return (
     <div style={{ background: "rgb(22,133,248)" }}>
@@ -74,6 +91,7 @@ font-family: 'Courier New', Courier, monospace;
               index={index}
               onClick={handleClick}
               isClicked={checkIsFlipped(index)}
+              isCleared={checkIsCleared(face)}
             />
           )
         })}
