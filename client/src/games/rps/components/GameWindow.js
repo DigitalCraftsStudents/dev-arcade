@@ -50,7 +50,8 @@ class GameBoard extends React.Component {
                         <div id="window">
 
                             <Player actions={playerOne} />
-
+                            <span>VS</span>
+                            <Player actions={playerOne} />
 
                             <div id="pickObject">
 
