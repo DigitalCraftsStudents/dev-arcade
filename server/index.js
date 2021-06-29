@@ -40,11 +40,11 @@ app.use(session({
 }));
 
 const cn = {
-    host: 'batyr.db.elephantsql.com',
-    port: 5432,
-    database: 'ytomuxvb',
-    user: 'ytomuxvb',
-    password: 'WW70aJ1-FFC1FD-zbyBeZYOMxqHd9IGM',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     max: 30 // use up to 30 connections
 
     // "types" - in case you want to set custom type parsers on the pool level

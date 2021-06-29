@@ -46,5 +46,3 @@ export function addScore(state, action) {
 // 	}
 // 	return state;
 // }
-
-{gameover ? <element> </element> : <element> </element>}
