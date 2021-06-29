@@ -1,9 +1,10 @@
 import React from 'react'
+import './Versus.css'
 
 function Versus() {
     return(
-        <div id='footer'>
-            <h2>VS</h2>
+        <div id='versus'>
+            <h1>VS</h1>
         </div>
     )
 

@@ -1,0 +1,6 @@
+#versus, #versus h1 {
+    display: inline;
+    width: 50px;
+    color: magenta;
+    text-shadow: 1px 1px mediumvioletred, 2px 2px crimson, 3px 3px darkred;
+}

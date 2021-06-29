@@ -63,7 +63,7 @@
   margin: auto;
   width: 800px;
   height: 550px;
-  border: 1px solid;
+  border: 2px solid;
   color: rgb(167, 105, 209);
 }
 
@@ -144,11 +144,11 @@
   margin: auto;
   width: 785px;
   height: 500px;
-  border: 1px solid rgb(158, 83, 201);
+  border: 2px solid rgb(158, 83, 201);
 }
 
 .actionBtn {
-  border: 1px solid rgb(158, 83, 201);
+  border: 2px solid rgb(158, 83, 201);
   font-size: small;
   padding: 1px;
 }
@@ -163,7 +163,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgb(145, 102, 173);
+  border-top: 2px solid rgb(145, 102, 173);
   height: 90px;
 }
 
@@ -172,4 +172,9 @@
 
 }
 
+h3{
+  color: #fff;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+	letter-spacing: 5px;
+}
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
