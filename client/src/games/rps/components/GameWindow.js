@@ -20,7 +20,6 @@ class GameWindow extends React.Component {
 
   selectAction=(selection) => {
     document.getElementById('pickObject').style.display='none'
-    document.getElementById('resetDiv').style.display='flex'
     this.setState({
       playerOne: selection,
       aiPlayer: actions[Math.floor(Math.random()*actions.length)],
@@ -29,6 +28,7 @@ class GameWindow extends React.Component {
   };
 
   determineWinner=() => {
+    document.getElementById('resetDiv').style.display='flex'
     this.countDown();
     console.log(this.state.playerOne, this.state.aiPlayer);
     document.getElementById("player_one").style.display="inline";
