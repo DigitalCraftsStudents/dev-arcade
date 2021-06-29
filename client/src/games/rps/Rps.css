@@ -178,3 +178,14 @@ h3{
 	letter-spacing: 5px;
 }
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+@import url('https://icons8.com/icon/nriB7d30z6Rq/barber-scissors');
+
+@import url('https://icons8.com/icon/77722/rock');
+
+@import url('https://icons8.com/icon/77781/paper');
+
+.icons {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
