@@ -10,10 +10,9 @@ import { Switch, Route, Link } from "react-router-dom";
  * 3. Create a corresponding <Route> which includes your Game Component from Step 1
  */
 
-import CounterGame from "./games/counter/CounterGame";
-
-import Ping from "./components/Ping";
-import MemoryGame from "./games/memory/MemoryGame";
+import CounterGame from './games/counter/CounterGame';
+import ReduxGame from './components/ReduxGame';
+import Ping from './components/Ping';
 
 function App() {
   return (
@@ -23,17 +22,17 @@ function App() {
         <Link to="/ping">Ping</Link>
         <Link to="/memory">Memory Game</Link>
       </nav>
-      <Switch>
-        <Route path="/counter">
-          <CounterGame />
-        </Route>
-        <Route path="/ping">
-          <Ping />
-        </Route>
-        <Route path="/memory">
-          <MemoryGame />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/counter">
+            <CounterGame />
+          </Route>
+          <Route path="/ping">
+            <Ping />
+          </Route>
+          <Route path="/redux">
+            <ReduxGame />
+          </Route>
+        </Switch>
     </div>
   );
 }

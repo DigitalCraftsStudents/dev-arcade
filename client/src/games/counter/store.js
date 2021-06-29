@@ -1,8 +1,10 @@
 import { createStore } from 'redux';
-import { counter } from './reducers';
+import { counter, addScore } from './reducers';
 // Default state
 const defaultState = {
-	count: 23893298238923
+	count: 23893298238923,
+	credentials: []
 };
 
 export const store = createStore(counter, defaultState);
+export const reduxStore = createStore(addScore, defaultState);
