@@ -1,4 +1,6 @@
-import React from "react";
+
+import React from 'react';
+import styled from 'styled-components';
 import Player from "./Player";
 import Reset from './Reset'
 import { connect } from "react-redux";
@@ -6,7 +8,31 @@ import { actionIncrement, actionDecrement, actionIncreaseMove } from "../actions
 import "./GameWindow.css";
 import Versus from "./Versus";
 
+
 const actions=["rock", "paper", "scissors"];
+
+
+
+
+const Board=styled.div`
+margin: auto;
+width: 800px;
+height: 500px;
+border: 1px solid;
+color: rgb(167, 105, 209);`
+
+const Window=styled.div`
+margin: auto;
+width: 785px;
+height: 450px;
+border: 1px solid rgb(158, 83, 201);`
+
+const Top=styled.div`
+text-align: left;
+padding: 1%;`
+
+
+
 
 class GameWindow extends React.Component {
   constructor(props) {
@@ -14,6 +40,7 @@ class GameWindow extends React.Component {
     this.state={
       playerOne: actions[1],
       aiPlayer: actions[1],
+
 
     };
   }
@@ -55,8 +82,8 @@ class GameWindow extends React.Component {
       this.props.decreaseScore();
     }
 
-  };
 
+   
   countDown=() => {
     const Box=document.getElementById("countdownbox");
     let words=['ROCK', 'PAPER', 'SCISSORS'], i=0;
@@ -80,10 +107,12 @@ class GameWindow extends React.Component {
   render() {
     const { playerOne, aiPlayer }=this.state;
     return (
+       <Board>
       <div id="board">
-        <div id="top">
+        <Top><div id="top"></Top>
           <span>&nbsp;x&nbsp;</span>&nbsp;
         </div>
+      <Window>
         <div id="window">
           <div id="countdownbox"></div>
           <Player id="player_one" actions={playerOne} />
@@ -116,7 +145,9 @@ class GameWindow extends React.Component {
           </div>
           <Reset onClick={() => { this.resetClick() }} />
         </div>
+</Window>
       </div>
+</Board>
     );
   }
 }
@@ -127,6 +158,7 @@ const mapStateToProps=(state) => {
     moves: state.moves
   };
 };
+
 
 function mapDispatchToProps(dispatch) {
   return {

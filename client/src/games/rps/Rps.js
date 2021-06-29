@@ -11,7 +11,14 @@ import React from "react";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { useState } from 'react';
+import styled from 'styled-components';
 
+const Wrapper=styled.section`
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+background-color: #222;
+color: #fff;
+font-family: "DotGothic16", sans-serif;
+font-weight: 700;`
 
 
 function Rps() {
@@ -19,6 +26,9 @@ function Rps() {
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
+
+        </Wrapper>
+
         <Header />
         <Score />
         <main>
@@ -38,6 +48,7 @@ function Rps() {
         </Popup>
         <GameBoard />
         <Footer />
+</Wrapper>
       </div>
     </Provider>
   );

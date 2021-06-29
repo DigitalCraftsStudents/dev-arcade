@@ -1,3 +1,18 @@
+.actionBtn{
+
+  font-size: small;
+  padding: 1px;
+  
+  margin-left: 30px;
+ margin-top: 60px;
+}
+
+#pickObject{
+display: relative;
+/* height: 800px; */
+
+}
+
 #ai_player, #player_one {
     display: none;
 }
@@ -65,3 +80,4 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
