@@ -87,6 +87,7 @@ class GameWindow extends React.Component {
         <div id="window">
           <div id="countdownbox"></div>
           <Player id="player_one" actions={playerOne} />
+          <Versus/>
           <Player id="ai_player" actions={aiPlayer} />
           <div id="pickObject">
             <button
