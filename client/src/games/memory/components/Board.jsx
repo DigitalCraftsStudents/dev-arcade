@@ -1,6 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import Card from "./Card";
 import styled from "styled-components";
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  Button,
+  DialogTitle
+} from "@material-ui/core";
 
 function Board() {
   const Grid = styled.div`
@@ -25,6 +33,10 @@ font-family: 'Courier New', Courier, monospace;
   const [selectedCards, setSelectedCards] = useState([]) //track flipped cards
   const [clearedCards, setClearedCards] = useState({}); // track matched cards
   const [moves, setMoves] = useState(0) // track player moves
+  const [showGameOver, setShowGameOver] = useState(false)
+  const [bestScore, setBestScore] = useState(
+    JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
+  );
   const timeout = useRef(null);
 
   //check if cards match
@@ -37,7 +49,7 @@ font-family: 'Courier New', Courier, monospace;
     }
     timeout.current = setTimeout(() => {
       setSelectedCards([]);
-    }, 600);
+    }, 400);
   }
   console.log(clearedCards);
 
@@ -55,7 +67,7 @@ font-family: 'Courier New', Courier, monospace;
 
   useEffect(() => {
     if (selectedCards.length === 2) {
-      setTimeout(evaluate, 600)
+      setTimeout(evaluate, 400)
     }
     console.log(clearedCards);
   }, [selectedCards])
@@ -71,13 +83,24 @@ font-family: 'Courier New', Courier, monospace;
   const checkCompletion = () => {
     // We are storing clearedCards as an object since its more efficient to search in an object instead of an array
     if (Object.keys(clearedCards).length === possibleCardFaces.length / 2) {
-      console.log("you win!");
+      setShowGameOver(true);
+      const highScore = Math.min(moves, bestScore);
+      setBestScore(highScore);
+      localStorage.setItem("bestScore", highScore);
     }
   }
 
   useEffect(() => {
     checkCompletion();
   }, [clearedCards])
+
+  const handleRestart = () => {
+    setClearedCards({});
+    setSelectedCards([]);
+    setShowGameOver(false);
+    setMoves(0)
+    setShuffledCards(shuffle(possibleCardFaces))
+  }
 
   return (
     <div style={{ background: "rgb(22,133,248)" }}>
@@ -96,6 +119,31 @@ font-family: 'Courier New', Courier, monospace;
           )
         })}
       </Grid>
+      <Button onClick={handleRestart} color="primary" variant="contained">
+        Restart
+      </Button>
+      <Dialog
+        open={showGameOver}
+        disableBackdropClick
+        disableEscapeKeyDown
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          Hurray!!! You completed the challenge
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            You completed the game in {moves} moves. Your best score is{" "}
+            {bestScore} moves.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleRestart} color="primary">
+            Restart
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
