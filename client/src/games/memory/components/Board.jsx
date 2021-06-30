@@ -7,7 +7,7 @@ import {
   DialogContent,
   DialogContentText,
   Button,
-  DialogTitle
+  DialogTitle,
 } from "@material-ui/core";
 import { connect } from "react-redux";
 
@@ -33,7 +33,6 @@ function Board(props) {
     "😂",
   ];
 
-
   const shuffle = (array = []) => {
     let randIndex;
     for (
@@ -50,11 +49,13 @@ function Board(props) {
     return array;
   };
 
-  const [shuffledCards, setShuffledCards] = useState(shuffle(possibleCardFaces)); // initialize state
-  const [selectedCards, setSelectedCards] = useState([]) //track flipped cards
+  const [shuffledCards, setShuffledCards] = useState(
+    shuffle(possibleCardFaces)
+  ); // initialize state
+  const [selectedCards, setSelectedCards] = useState([]); //track flipped cards
   const [clearedCards, setClearedCards] = useState({}); // track matched cards
-  const [moves, setMoves] = useState(0) // track player moves
-  const [showGameOver, setShowGameOver] = useState(false)
+  const [moves, setMoves] = useState(0); // track player moves
+  const [showGameOver, setShowGameOver] = useState(false);
   const [bestScore, setBestScore] = useState(
     JSON.parse(localStorage.getItem("bestScore")) || Number.POSITIVE_INFINITY
   );
@@ -72,7 +73,7 @@ function Board(props) {
     timeout.current = setTimeout(() => {
       setSelectedCards([]);
     }, 400);
-  }
+  };
 
   console.log(clearedCards);
 
@@ -90,7 +91,6 @@ function Board(props) {
 
   useEffect(() => {
     if (selectedCards.length === 2) {
-
       setTimeout(evaluate, 400);
     }
     console.log(clearedCards);
@@ -107,25 +107,25 @@ function Board(props) {
   const checkCompletion = () => {
     // We are storing clearedCards as an object since its more efficient to search in an object instead of an array
     if (Object.keys(clearedCards).length === possibleCardFaces.length / 2) {
+      props.handleClick();
       setShowGameOver(true);
       const highScore = Math.min(moves, bestScore);
       setBestScore(highScore);
       localStorage.setItem("bestScore", highScore);
     }
-  }
+  };
 
   useEffect(() => {
     checkCompletion();
-  }, [clearedCards])
+  }, [clearedCards]);
 
   const handleRestart = () => {
     setClearedCards({});
     setSelectedCards([]);
     setShowGameOver(false);
-    setMoves(0)
-    setShuffledCards(shuffle(possibleCardFaces))
-  }
-
+    setMoves(0);
+    setShuffledCards(shuffle(possibleCardFaces));
+  };
 
   return (
     <div style={{ background: "rgb(22,133,248)" }}>
