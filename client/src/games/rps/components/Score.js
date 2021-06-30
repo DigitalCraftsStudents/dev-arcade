@@ -1,3 +1,5 @@
+import './Score.css';
+
 function Score(props) {
     return (
         <div id="score">

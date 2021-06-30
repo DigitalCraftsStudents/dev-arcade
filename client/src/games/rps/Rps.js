@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Popup from "./components/Popup";
 import Reset from "./components/Reset";
 import Score from "./containers/ScoreContainer";
+import Countdown from "./components/Countdown";
 import "./Rps.css";
 
 import React from "react";
@@ -22,7 +23,7 @@ function Rps() {
         <Header />
         <Score />
         <main>
-          <button onClick={() => setButtonPopup(true)}>How to Play</button>
+          <button className="instructions" onClick={() => setButtonPopup(true)}>How to Play</button>
         </main>
 
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
@@ -36,6 +37,7 @@ function Rps() {
             <br></br>
             Paper (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png"/>) wins against rock (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png"/>).</p>
         </Popup>
+        <Countdown/>
         <GameBoard />
         <Footer />
       </div>
