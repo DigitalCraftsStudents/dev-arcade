@@ -1,10 +1,9 @@
 import Footer from "./components/Footer";
 import GameBoard from "./components/GameWindow";
 import Header from "./components/Header";
-// import Instructions from "./components/Instructions";
 import Popup from "./components/Popup";
-import Reset from "./components/Reset";
 import Score from "./containers/ScoreContainer";
+import NameEntry from './components/NameEntry'
 import "./Rps.css";
 
 import React from "react";
@@ -26,14 +25,15 @@ float: left;
 
 function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
+  const [userName, setUserName] = useState('Username')
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
-
         <Wrapper>
 
           <Header />
-          <Score />
+          <NameEntry handleChange={e => setUserName(e.target.value)}/>
+          <Score  userName={userName} />
           <main>
             <HTPButton>
               <button onClick={() => setButtonPopup(true)}>How to Play</button>
