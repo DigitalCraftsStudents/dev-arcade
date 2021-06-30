@@ -3,6 +3,7 @@ import GameBoard from "./components/GameWindow";
 import Header from "./components/Header";
 import Popup from "./components/Popup";
 import Score from "./containers/ScoreContainer";
+import Countdown from "./components/Countdown";
 import NameEntry from './components/NameEntry'
 import "./Rps.css";
 
