@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
+import Home from './components/Home/Home'
 /**
  * Games will be loaded into the Arcade here
  * 
@@ -25,7 +25,10 @@ function App() {
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
       </nav>
-        <Switch>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
           <Route path="/counter">
             <CounterGame />
           </Route>
