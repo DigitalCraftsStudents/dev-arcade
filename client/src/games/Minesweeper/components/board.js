@@ -3,11 +3,16 @@ import CreateBoard from '../utils/CreateBoard';
 import { revealed } from "../utils/Reveal";
 import Cell from './Cell';
 import { toast,ToastContainer } from 'react-toastify';
+import { connect,useSelector } from 'react-redux';
+import scoreActions from '../actions/scoreActions';
 import 'react-toastify/dist/ReactToastify.css';
-function Board() {
+function Board(props) {
     const [grid,setGrid]=useState([]);
     const [nonMinecount,setNonMinecount]=useState(0);
     const [mineLocation,setmineLocation]=useState([]);
+    const score = useSelector((state) => state.score);
+    
+
     const style={
         display : 'flex',
         flexDirection : 'row',
@@ -15,6 +20,9 @@ function Board() {
         color:'white',
         
     }
+
+    
+
     useEffect(()=>{
         
         freshBoard();
@@ -22,8 +30,8 @@ function Board() {
 
     // Making freshboard at start
     const freshBoard = () => {
-        const newBoard=CreateBoard(6,6,5);
-        setNonMinecount(6*6-5);
+        const newBoard=CreateBoard(6,6,1);
+        setNonMinecount(6*6-1);
         setmineLocation(newBoard.mineLocation);
         setGrid(newBoard.board);
     }
@@ -49,6 +57,9 @@ function Board() {
             setTimeout(newfresh,3000);
         }
         if(nonMinecount===0){
+            console.log(score);
+            console.log('inside nonminecount')
+            props.handleClick();
             toast.success('Wohoo!!,You won',{ position: "top-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, });
             setTimeout(newfresh,3000);
         }
@@ -63,8 +74,10 @@ function Board() {
     return (
         <div className="parent">
             <div>
+        
                 <h3 style={{color:'white',textAlign:'center',fontSize:'30px',margin:'0px', paddingBottom: '15px', color: '#FAEB2C', fontFamily: 'primary-font', fontSize: '40px'}}>Non-Mines - {nonMinecount}</h3>
-                <ToastContainer></ToastContainer>
+                <ToastContainer>
+                </ToastContainer>
                 {grid.map((singlerow,index1)=>{
                     return (
                         <div style={style} key={index1}>
@@ -80,4 +93,14 @@ function Board() {
         </div>
     ) 
 }
-export default Board;
+function mapDispatchToProps(dispatch) {
+    return {
+        // propName in React : a fn that calls dispatch
+        handleClick: () => {
+            dispatch(scoreActions());
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Board);
+
