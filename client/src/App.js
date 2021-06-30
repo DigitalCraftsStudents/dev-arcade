@@ -16,7 +16,8 @@ import {
 
 import CounterGame from './games/counter/CounterGame';
 
-import Ping from './components/Ping';
+import Ping from "./components/Ping";
+import Tetris from "./games/tetris/tetris";
 
 function App() {
   return (
@@ -24,15 +25,19 @@ function App() {
       <nav>
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
+        <Link to="/tetris">Tetris Game</Link>
       </nav>
-        <Switch>
-          <Route path="/counter">
-            <CounterGame />
-          </Route>
-          <Route path="/ping">
-            <Ping />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route path="/counter">
+          <CounterGame />
+        </Route>
+        <Route path="/ping">
+          <Ping />
+        </Route>
+        <Route path="/tetris">
+          <Tetris /> 
+        </Route>
+      </Switch>
     </div>
   );
 }
