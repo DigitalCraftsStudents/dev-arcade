@@ -1,10 +1,10 @@
 import Footer from "./components/Footer";
 import GameBoard from "./components/GameWindow";
 import Header from "./components/Header";
-// import Instructions from "./components/Instructions";
 import Popup from "./components/Popup";
-import Reset from "./components/Reset";
 import Score from "./containers/ScoreContainer";
+import Countdown from "./components/Countdown";
+import NameEntry from './components/NameEntry'
 import "./Rps.css";
 
 import React from "react";
@@ -22,21 +22,39 @@ font-weight: 700;`
 
 const HTPButton=styled.button`
 float: left;
+font-family: "DotGothic16", sans-serif;
+display: inline-block;
+vertical-align: middle;
+user-select: none;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+line-height: 1.5;
+background: white;
+color: black;
+font-size: 20px;
+font-weight: 400;
+text-align: left;
+border: 3px solid black!important;
+border-radius: 0;
+box-shadow: 3px 3px black, 5px 5px white;
+padding-right: 5%;
+margin-top: 20px;
 `
 
 function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
+  const [userName, setUserName] = useState('Username')
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
-
         <Wrapper>
 
           <Header />
-          <Score />
+          <NameEntry handleChange={e => setUserName(e.target.value)}/>
+          <Score  userName={userName} />
           <main>
-            <HTPButton>
-              <button onClick={() => setButtonPopup(true)}>How to Play</button>
+            <HTPButton onClick={() => setButtonPopup(true)}>How to Play
+          
             </HTPButton>
           </main>
 

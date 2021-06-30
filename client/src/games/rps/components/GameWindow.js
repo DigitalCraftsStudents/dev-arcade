@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { actionIncrement, actionDecrement, actionIncreaseMove } from "../actions";
 import "./GameWindow.css";
 import Versus from "./Versus";
+import Countdown from './Countdown';
 
 
 const actions=["rock", "paper", "scissors"];
@@ -99,12 +100,12 @@ class GameWindow extends React.Component {
     }
 
     resetClick=() => {
-        document.getElementById('pickObject').style.display='flex'
+        document.getElementById('pickObject').style.display='block'
         document.getElementById("player_one").style.display="none";
         document.getElementById("ai_player").style.display="none";
         document.getElementById('resetDiv').style.display='none'
     }
-
+    // this project fucking sucks, ugh - skyler
     render() {
         const { playerOne, aiPlayer }=this.state;
         return (
@@ -115,6 +116,7 @@ class GameWindow extends React.Component {
         </div></Top>
                     <Window>
                         <div id="window">
+                            <Countdown/>
                             <div id="countdownbox"></div>
                             <Player id="player_one" actions={playerOne} />
 
