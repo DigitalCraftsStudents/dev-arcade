@@ -1,5 +1,6 @@
 /* App */
 .Tetris {
+
   --col-side: calc(var(--tile-size) * 4);
   --col-center: calc(var(--tile-size) * 10);
   --grid-height: calc(var(--tile-size) * 18);
@@ -7,7 +8,7 @@
   width: calc(var(--tile-size) * (4 + 1 + 10 + 1 + 4));
   margin: auto;
   display: grid;
-  margin-top: 10px;
+  margin-top: 60px;
 
   grid-gap: var(--tile-size) var(--tile-size);
   /* Defines three columns of `--col-side`, `--col-center`, and `--col-side` widths. */
@@ -34,7 +35,8 @@ and 'b'. The '.' represents an empty cell on the grid. */
   color: white;
 }
 
-img {
+img.titleTetris {
+  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
