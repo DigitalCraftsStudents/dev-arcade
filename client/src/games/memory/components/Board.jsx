@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from "@material-ui/core";
 import { connect } from "react-redux";
+import './style.css';
 
 import { actionIncrement } from "../actions";
 
