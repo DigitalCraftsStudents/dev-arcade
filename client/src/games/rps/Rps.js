@@ -22,6 +22,23 @@ font-weight: 700;`
 
 const HTPButton=styled.button`
 float: left;
+font-family: "DotGothic16", sans-serif;
+display: inline-block;
+vertical-align: middle;
+user-select: none;
+padding: 0.375rem 0.75rem;
+font-size: 1rem;
+line-height: 1.5;
+background: white;
+color: black;
+font-size: 20px;
+font-weight: 400;
+text-align: left;
+border: 3px solid black!important;
+border-radius: 0;
+box-shadow: 3px 3px black, 5px 5px white;
+padding-right: 5%;
+margin-top: 20px;
 `
 
 function Rps() {
@@ -36,8 +53,8 @@ function Rps() {
           <NameEntry handleChange={e => setUserName(e.target.value)}/>
           <Score  userName={userName} />
           <main>
-            <HTPButton>
-              <button onClick={() => setButtonPopup(true)}>How to Play</button>
+            <HTPButton onClick={() => setButtonPopup(true)}>How to Play
+          
             </HTPButton>
           </main>
 

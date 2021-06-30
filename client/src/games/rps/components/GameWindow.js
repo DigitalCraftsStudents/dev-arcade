@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { actionIncrement, actionDecrement, actionIncreaseMove } from "../actions";
 import "./GameWindow.css";
 import Versus from "./Versus";
+import Countdown from './Countdown';
 
 
 const actions=["rock", "paper", "scissors"];
@@ -115,6 +116,7 @@ class GameWindow extends React.Component {
         </div></Top>
                     <Window>
                         <div id="window">
+                            <Countdown/>
                             <div id="countdownbox"></div>
                             <Player id="player_one" actions={playerOne} />
                             <Versus />
