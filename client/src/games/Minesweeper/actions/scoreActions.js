@@ -12,5 +12,5 @@ const scoreActions = () => {
 };
 
 // window.scoreActions = scoreActions;
-console.log(scoreActions)
+
 export default scoreActions;
