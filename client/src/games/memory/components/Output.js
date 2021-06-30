@@ -5,7 +5,7 @@ const Output = (props) => (
   <div>
     <h1>Username: {props.username}</h1>
     <UpdateUsername />
-    <h3>Score: {props.amount}</h3>
+    <h3>Wins: {props.amount}</h3>
   </div>
 );
 
