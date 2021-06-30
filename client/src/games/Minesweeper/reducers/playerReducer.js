@@ -1,4 +1,5 @@
 import { ADD_PLAYER, ADD_SCORE } from "./actionTypes";
+import store from '../store';
 
 const initialState = {
     name: '',
@@ -6,18 +7,24 @@ const initialState = {
 }
 
 const playerReducer = (state=initialState, action) => {
+    console.log(action.type)
     switch (action.type){
+        
         case ADD_PLAYER: {
+            
             const { name } = action.payload
-            return { name };
+            return { ...state, name };
         }
         case ADD_SCORE: {
-            const { score } = action.payload
-            return { score };
+            
+            
+            return {...state, score: state.score + 1};
         }
         default: 
             return state;
     }
 }
+
+window.playerReducer = playerReducer;
 
 export default playerReducer;

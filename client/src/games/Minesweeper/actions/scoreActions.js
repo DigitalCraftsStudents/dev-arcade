@@ -2,11 +2,15 @@ import { ADD_SCORE } from "../reducers/actionTypes";
 
 // return
 
-const scoreActions = ({score}) => {
+const scoreActions = () => {
+    
     return {
+    
     type: ADD_SCORE,
-    payload: {score},
+    
     }
 };
 
+// window.scoreActions = scoreActions;
+console.log(scoreActions)
 export default scoreActions;
