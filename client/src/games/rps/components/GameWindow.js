@@ -99,7 +99,7 @@ class GameWindow extends React.Component {
     }
 
     resetClick=() => {
-        document.getElementById('pickObject').style.display='flex'
+        document.getElementById('pickObject').style.display='block'
         document.getElementById("player_one").style.display="none";
         document.getElementById("ai_player").style.display="none";
         document.getElementById('resetDiv').style.display='none'
