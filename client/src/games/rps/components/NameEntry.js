@@ -4,9 +4,7 @@ import './NameEntry.css'
 function NameEntry({handleChange}) {
 
     const nameEntrySubmit = () => {
-        const board = document.getElementById('board')
         const playerEntry = document.getElementById('playerEntry')
-        board.style.display = 'block'
         playerEntry.style.display = 'none'
     }
 

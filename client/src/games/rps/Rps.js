@@ -27,13 +27,17 @@ float: left;
 function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
   const [userName, setUserName] = useState('Username')
+  const [boardDisplay, setBoardDisplay] = useState('none')
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
         <Wrapper>
 
           <Header />
-          <NameEntry handleChange={e => setUserName(e.target.value)}/>
+          <NameEntry handleChange={e => {
+              setUserName(e.target.value)
+              setBoardDisplay('block')
+            }}/>
           <Score  userName={userName} />
           <main>
             <HTPButton>
@@ -52,7 +56,7 @@ function Rps() {
             <br></br>
             Paper (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />) wins against rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />).</p>
           </Popup>
-          <GameBoard />
+          <GameBoard display={boardDisplay} />
           <Footer />
         </Wrapper>
       </div>

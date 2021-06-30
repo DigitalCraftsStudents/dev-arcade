@@ -15,6 +15,7 @@ const actions=["rock", "paper", "scissors"];
 
 
 const Board=styled.div`
+display: ${props => props.display ? props.display : 'none'};
 margin: auto;
 width: 800px;
 height: 500px;
@@ -40,7 +41,7 @@ class GameWindow extends React.Component {
         this.state={
             playerOne: actions[1],
             aiPlayer: actions[1],
-
+            display: props.display
 
         };
     }
@@ -106,9 +107,9 @@ class GameWindow extends React.Component {
     }
 
     render() {
-        const { playerOne, aiPlayer }=this.state;
+        const { playerOne, aiPlayer, display }=this.state;
         return (
-            <Board>
+            <Board display={display}>
                 <div id="board">
                     <Top><div id="top">
                         <span>&nbsp;x&nbsp;</span>&nbsp;
