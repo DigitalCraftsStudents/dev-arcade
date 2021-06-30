@@ -105,7 +105,7 @@ class GameWindow extends React.Component {
         document.getElementById("ai_player").style.display="none";
         document.getElementById('resetDiv').style.display='none'
     }
-    // this project fucking sucks, ugh - skyler
+    // this project fucking sucks, ugh
     render() {
         const { playerOne, aiPlayer }=this.state;
         return (
