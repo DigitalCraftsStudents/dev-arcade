@@ -8,7 +8,7 @@ function Countdown () {
         if(seconds> 0) {
             setTimeout(() => setSeconds(seconds - 1), 1000);
         } else {
-            setSeconds('FUCK DIGITAL CRAFTS')
+            setSeconds('ROCK PAPER SCISSORS SHOOT')
         }
     });
 
