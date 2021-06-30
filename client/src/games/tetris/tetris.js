@@ -24,7 +24,7 @@ function Tetris() {
           <img
           src={title}
           alt="title"
-          className="title"
+          className="titleTetris"
         />
         </header>
         
