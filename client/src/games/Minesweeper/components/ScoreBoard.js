@@ -1,20 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
+import { connect,useSelector } from 'react-redux';
+import scoreActions from '../actions/scoreActions';
 
 
-export default function ScoreBoard(props) {
-    const Button = styled.button`
-    background-color: #E900FF;
-    color: #FAEB2C;
-    align-items: center;
-    `;
+ function ScoreBoard(props) {
+    
+    const score = useSelector((state) => state.score);
+
     return (
         <div className="score-board">
             <div>
                 <h1 style={{color: "#FAEB2C", fontFamily: "primary-font", fontSize: "40px"}}>
-                        Score:{ props.score } 
+                        Score:{ score } 
                 </h1>
             </div>
         </div>
     )
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        // propName in React : a fn that calls dispatch
+        handleClick: () => {
+            dispatch(scoreActions());
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ScoreBoard);
