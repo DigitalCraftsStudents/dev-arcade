@@ -4,5 +4,4 @@ import { counter } from './reducers';
 const defaultState = {
 	count: 100
 };
-
 export const store = createStore(counter, defaultState);
