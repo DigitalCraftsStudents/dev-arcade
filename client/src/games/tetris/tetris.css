@@ -185,11 +185,9 @@ img.wallpaper {
   border-top-color: var(--border-top-color);
   border-right-color: var(--border-right-color);
   border-bottom-color: var(--border-bottom-color);
-}
-
-* {
   box-sizing: border-box;
 }
+
 
 .grid-board {
   display: grid;
