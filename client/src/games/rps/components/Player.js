@@ -2,6 +2,9 @@ import React from "react";
 import paper from "./images/paper.png";
 import scissors from "./images/scissors.png";
 import rock from "./images/rock.png";
+import './Player.css'
+
+
 
 const Player = (props) => {
   return (
@@ -28,3 +31,4 @@ const Player = (props) => {
 };
 
 export default Player;
+
