@@ -15,14 +15,10 @@ import {
  */
 
 import CounterGame from './games/counter/CounterGame';
-<<<<<<< HEAD
 import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
-import Ping from './components/Ping';
-=======
 import Rps from './games/rps/Rps'
 import Ping from "./components/Ping";
 import Tetris from "./games/tetris/tetris";
->>>>>>> dev
 
 function App() {
   return (
@@ -43,18 +39,15 @@ function App() {
           <Route path="/ping">
             <Ping />
           </Route>
-<<<<<<< HEAD
           <Route path="/Minesweeper">
             <MinesweeperGame/>
           </Route>
-=======
           <Route path="/rps">
             <Rps />
           </Route>
           <Route path="/tetris">
           <Tetris /> 
         </Route>
->>>>>>> dev
         </Switch>
     </div>
   );
