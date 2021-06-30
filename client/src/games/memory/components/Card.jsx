@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Card.css';
+import './style.css';
 
 function Card(props) {
 
