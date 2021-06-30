@@ -20,6 +20,9 @@ color: #fff;
 font-family: "DotGothic16", sans-serif;
 font-weight: 700;`
 
+const HTPButton=styled.button`
+float: left;
+`
 
 function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
@@ -27,28 +30,30 @@ function Rps() {
     <Provider store={store}>
       <div className="undo_text_align rps_body">
 
-        </Wrapper>
+        <Wrapper>
 
-        <Header />
-        <Score />
-        <main>
-          <button onClick={() => setButtonPopup(true)}>How to Play</button>
-        </main>
+          <Header />
+          <Score />
+          <main>
+            <HTPButton>
+              <button onClick={() => setButtonPopup(true)}>How to Play</button>
+            </HTPButton>
+          </main>
 
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Instructions:</h3>
-          <p>Click on the button to choose either rock, paper or scissors 
+          <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+            <h3>Instructions:</h3>
+            <p>Click on the button to choose either rock, paper or scissors
             to play against the computer.The outcome of the game is determined by 3 simple rules:
             <br></br>
-            Rock (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png"/>) wins against scissors (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png"/>).
+            Rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />) wins against scissors (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png" />).
             <br></br>
-            Scissors (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png"/>) win against paper(<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png"/>).
+            Scissors (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png" />) win against paper(<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />).
             <br></br>
-            Paper (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png"/>) wins against rock (<img className ="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png"/>).</p>
-        </Popup>
-        <GameBoard />
-        <Footer />
-</Wrapper>
+            Paper (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />) wins against rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />).</p>
+          </Popup>
+          <GameBoard />
+          <Footer />
+        </Wrapper>
       </div>
     </Provider>
   );

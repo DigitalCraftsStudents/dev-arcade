@@ -13,7 +13,7 @@ display: relative;
 
 }
 
-#ai_player, #player_one {
+#ai_player, #player_one{
     display: none;
 }
 

@@ -1,6 +1,10 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import myr from '../components/images/myr.png';
+import celi from '../components/images/celi.png';
+import skyler from '../components/images/skyler.png';
+import './Footer.css'
 
 const FooterDiv=styled.div`
 text-align: center;
@@ -14,13 +18,9 @@ background-color: #222;`
 
 
 
-import myr from '../components/images/myr.png';
-import celi from '../components/images/celi.png';
-import skyler from '../components/images/skyler.png';
-import './Footer.css'
 
 function Footer() {
-    return(
+    return (
         <div id='footer'>
             <a href="https://github.com/sriveragithub" target="_blank">Skyler<img className="skyler" src={skyler}></img> </a>
             <a href="https://github.com/csolis1" target="_blank">Celida<img className="celi" src={celi}></img> </a>
