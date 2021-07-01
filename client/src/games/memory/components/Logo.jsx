@@ -3,8 +3,8 @@ import MemoryLogo from "./MemoryLogo.png"
 
 function Logo(){
     return(
-    <div>
-        <img className="logo" src={MemoryLogo} alt="logo"/>
+    <div id="memory-logo">
+        <img className="memory-logo-image" src={MemoryLogo} alt="logo"/>
     </div>
     )
 }
