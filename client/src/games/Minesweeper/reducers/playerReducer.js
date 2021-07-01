@@ -1,5 +1,5 @@
 import { ADD_PLAYER, ADD_SCORE } from "./actionTypes";
-import store from '../store';
+
 
 const initialState = {
     name: '',

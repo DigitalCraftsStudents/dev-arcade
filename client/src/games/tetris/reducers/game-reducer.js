@@ -7,8 +7,7 @@ import {
   RESUME,
   RESTART,
   GAME_OVER,
-  USERNAME,
-  SCORE
+  USERNAME
 } from "../actions";
 
 import {
@@ -16,8 +15,7 @@ import {
   nextRotation,
   canMoveTo,
   addBlockToGrid,
-  checkRows,
-  randomShape,
+  checkRows
 } from "../utils";
 
 const gameReducer = (state = defaultState(), action) => {

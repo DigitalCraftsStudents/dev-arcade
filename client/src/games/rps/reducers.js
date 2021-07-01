@@ -22,6 +22,7 @@ export function counter(state=defaultState, action) {
         ...state,
         moves: state.moves+1,
       };
+    default:
+      return state;
   }
-  return state;
-}
+};

@@ -1,6 +1,6 @@
 import React from "react";
-import { createStore } from "redux";
-import { Provider, useSelector } from "react-redux";
+
+import { Provider} from "react-redux";
 import store from './store'
 import "./tetris.css";
 import title from './images/tetris.png'
