@@ -3,7 +3,6 @@ import './App.css';
 import {
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 import Home from './components/Home/Home'
 /**
@@ -15,16 +14,19 @@ import Home from './components/Home/Home'
  */
 
 import CounterGame from './games/counter/CounterGame';
-
+import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
 import Ping from './components/Ping';
+import Rps from './games/rps/Rps'
+import Tetris from "./games/tetris/tetris";
+import MemoryGame from './games/memory/MemoryGame';
+
+import MyChessBoard from './games/chess/components/MyChessBoard.js';
+
 
 function App() {
   return (
     <div className="App">
-      {/* <nav>
-        <Link to="/counter">Counter Game</Link>
-        <Link to="/ping">Ping</Link>
-      </nav> */}
+      
       <Switch>
         <Route exact path="/">
           <Home />
@@ -36,19 +38,19 @@ function App() {
           <Ping />
         </Route>
         <Route path="/chess">
-          <Home />
+          <MyChessBoard />
         </Route>
         <Route path="/memory">
-          <Home />
+          <MemoryGame />
         </Route>
         <Route path="/minesweeper">
-          <Home />
+          <MinesweeperGame />
         </Route>
         <Route path="/rps">
-          <Home />
+          <Rps />
         </Route>
         <Route path="/tetris">
-          <Home />
+          <Tetris />
         </Route>
       </Switch>
     </div>
