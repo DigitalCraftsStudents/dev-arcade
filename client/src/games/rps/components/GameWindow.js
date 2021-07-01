@@ -20,7 +20,7 @@ display: ${props => props.display? props.display:'none'};
 margin: auto;
 width: 800px;
 height: 500px;
-border: 1px solid;
+border: 3px solid;
 color: rgb(167, 105, 209);`
 
 const Window=styled.div`
@@ -32,7 +32,7 @@ justify-content: center;
 margin: auto;
 width: 785px;
 height: 450px;
-border: 1px solid rgb(158, 83, 201);`
+border: 3px solid rgb(158, 83, 201);`
 
 const Top=styled.div`
 text-align: left;
