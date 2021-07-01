@@ -3,9 +3,10 @@ import './App.css';
 import {
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
-
+import HomeHeader from "./components/Home/Navbar/HomeHeader";
+import HomeHeaderLinks from "./components/Home/Navbar/HomeHeaderLinks";
+import Home from './components/Home/Home'
 /**
  * Games will be loaded into the Arcade here
  * 
@@ -15,24 +16,55 @@ import {
  */
 
 import CounterGame from './games/counter/CounterGame';
-
+import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
 import Ping from './components/Ping';
+import Rps from './games/rps/Rps'
+import Tetris from "./games/tetris/tetris";
+import MemoryGame from './games/memory/MemoryGame';
 
-function App() {
+import MyChessBoard from './games/chess/components/MyChessBoard.js';
+
+
+function App(props) {
+  const { ...rest } = props;
   return (
     <div className="App">
-      <nav>
-        <Link to="/counter">Counter Game</Link>
-        <Link to="/ping">Ping</Link>
-      </nav>
-        <Switch>
-          <Route path="/counter">
-            <CounterGame />
-          </Route>
-          <Route path="/ping">
-            <Ping />
-          </Route>
-        </Switch>
+      <HomeHeader
+        rightLinks={<HomeHeaderLinks />}
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white",
+        }}
+        {...rest}
+      />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/counter">
+          <CounterGame />
+        </Route>
+        <Route path="/ping">
+          <Ping />
+        </Route>
+        <Route path="/chess">
+          <MyChessBoard />
+        </Route>
+        <Route path="/memory">
+          <MemoryGame />
+        </Route>
+        <Route path="/minesweeper">
+          <MinesweeperGame />
+        </Route>
+        <Route path="/rps">
+          <Rps />
+        </Route>
+        <Route path="/tetris">
+          <Tetris />
+        </Route>
+      </Switch>
     </div>
   );
 }

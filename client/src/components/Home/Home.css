@@ -1,0 +1,16 @@
+.logo {
+    height: 28%;
+    width: 28%;
+}
+.gameLogo{
+    height:auto;
+    width: 100%;
+}
+.fbi{
+    height:auto;
+    width: 100%;
+}
+.modalText{
+    align-items: center;
+    text-align: center;
+}
