@@ -4,7 +4,10 @@ import React, {useState, useEffect, useRef} from 'react';
 import Chess from "chess.js"
 import store from "../store";
 import { Provider } from 'react-redux';
+
 import NameForm from "./NameForm";
+
+
 
 
 
@@ -54,6 +57,8 @@ onDrop = {onDrop}/>
     </Provider>
 );
 };
+
+
 
 
 
