@@ -1,3 +1,8 @@
+body {
+  background-image: url("https://image.freepik.com/free-vector/retro-futuristic-synthwave-retrowave-styled-night-cityscape-with-sunset-background_148087-120.jpg");
+  background-size: 100% 100%;
+}
+
 .memo-card-container{
 
     width: 200px;

@@ -129,7 +129,7 @@ function Board(props) {
   };
 
   return (
-    <div style={{ background: "rgb(22,133,248)" }}>
+    <div>
       <Grid>
         {shuffledCards.map((face, index) => {
           return (
