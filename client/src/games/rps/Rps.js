@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { useState } from 'react';
 import styled from 'styled-components';
+import Player from "./components/Player";
 
 const Wrapper=styled.section`
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
@@ -28,6 +29,7 @@ function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
   const [userName, setUserName] = useState('Username')
   const [boardDisplay, setBoardDisplay] = useState('none')
+  const [PlayerEntryDisplay, setPlayerEntryDisplay] = useState('block')
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
@@ -36,8 +38,10 @@ function Rps() {
           <Header />
           <NameEntry handleChange={e => {
               setUserName(e.target.value)
+            }} handleClick={() => {
               setBoardDisplay('block')
-            }}/>
+              setPlayerEntryDisplay('none')
+            }} playerEntryDisplay={PlayerEntryDisplay}/>
           <Score  userName={userName} />
           <main>
             <HTPButton>
