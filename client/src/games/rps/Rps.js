@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { useState } from 'react';
 import styled from 'styled-components';
+import Player from "./components/Player";
 
 const Wrapper=styled.section`
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
@@ -44,13 +45,20 @@ margin-top: 20px;
 function Rps() {
   const [buttonPopup, setButtonPopup]=useState(false);
   const [userName, setUserName] = useState('Username')
+  const [boardDisplay, setBoardDisplay] = useState('none')
+  const [PlayerEntryDisplay, setPlayerEntryDisplay] = useState('block')
   return (
     <Provider store={store}>
       <div className="undo_text_align rps_body">
         <Wrapper>
 
           <Header />
-          <NameEntry handleChange={e => setUserName(e.target.value)}/>
+          <NameEntry handleChange={e => {
+              setUserName(e.target.value)
+            }} handleClick={() => {
+              setBoardDisplay('block')
+              setPlayerEntryDisplay('none')
+            }} playerEntryDisplay={PlayerEntryDisplay}/>
           <Score  userName={userName} />
           <main>
             <HTPButton onClick={() => setButtonPopup(true)}>How to Play
@@ -69,7 +77,7 @@ function Rps() {
             <br></br>
             Paper (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />) wins against rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />).</p>
           </Popup>
-          <GameBoard />
+          <GameBoard display={boardDisplay} />
           <Footer />
         </Wrapper>
       </div>
