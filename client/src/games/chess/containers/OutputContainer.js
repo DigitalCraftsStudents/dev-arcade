@@ -29,6 +29,7 @@ function mapStateToProps(state2) {
    */
 }
 
+
 export default connect(mapStateToProps)(Output);
                // returns a function ^
                                 //function(Output);
