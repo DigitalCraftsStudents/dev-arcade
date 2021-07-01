@@ -30,7 +30,9 @@
 }
 
 .memo-clicked {
-  background-color: #3d144c;
+  background-image: url("./CardFace.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 .memo-hidden {
