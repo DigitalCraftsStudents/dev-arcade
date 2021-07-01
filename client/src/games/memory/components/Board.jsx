@@ -129,8 +129,8 @@ function Board(props) {
   };
 
   return (
-    <div style={{ background: "rgb(22,133,248)" }}>
-      <Grid>
+    <div>
+      <div className="memo-grid">
         {shuffledCards.map((face, index) => {
           return (
             <Card
@@ -144,7 +144,7 @@ function Board(props) {
             />
           );
         })}
-      </Grid>
+      </div>
       <Button onClick={handleRestart} color="primary" variant="contained">
         Restart
       </Button>
