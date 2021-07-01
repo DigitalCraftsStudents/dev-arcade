@@ -21,10 +21,10 @@ import Ping from './components/Ping';
 function App() {
   return (
     <div className="App">
-      <nav>
+      {/* <nav>
         <Link to="/counter">Counter Game</Link>
         <Link to="/ping">Ping</Link>
-      </nav>
+      </nav> */}
       <Switch>
         <Route exact path="/">
           <Home />
