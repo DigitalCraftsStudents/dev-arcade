@@ -21,9 +21,7 @@ import Ping from './components/Ping';
 import Rps from './games/rps/Rps'
 import Tetris from "./games/tetris/tetris";
 import MemoryGame from './games/memory/MemoryGame';
-
 import MyChessBoard from './games/chess/components/MyChessBoard.js';
-
 
 function App() {
   return (
