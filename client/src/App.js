@@ -6,6 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 
+
 /**
  * Games will be loaded into the Arcade here
  * 
@@ -21,6 +22,9 @@ import Rps from './games/rps/Rps'
 import Tetris from "./games/tetris/tetris";
 import MemoryGame from './games/memory/MemoryGame';
 
+import MyChessBoard from './games/chess/components/MyChessBoard.js';
+
+
 function App() {
   return (
     <div className="App">
@@ -33,6 +37,7 @@ function App() {
         <Link to="/tetris">Tetris Game</Link>
         <Link to="/memory">Memory Game</Link>
         <Link to="/ping">Ping</Link>
+        <Link to="/chess">Chess</Link>
       </nav>
         <Switch>
           <Route path="/counter">
@@ -52,6 +57,9 @@ function App() {
           </Route>
           <Route path="/ping">
             <Ping />
+          </Route>
+          <Route path="/chess">
+            <MyChessBoard/>
           </Route>
         </Switch>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Board from './components/Board';
+import Board from './components/board';
 import SignupForm from './components/SignupForm';
 import ScoreBoard from './components/ScoreBoard';
 import Instructions from './components/Instructions';
