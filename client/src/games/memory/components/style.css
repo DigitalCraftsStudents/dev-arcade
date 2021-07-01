@@ -1,10 +1,10 @@
-#memory-game{
+#memory-game {
   background-image: url("https://image.freepik.com/free-vector/retro-futuristic-synthwave-retrowave-styled-night-cityscape-with-sunset-background_148087-120.jpg");
   background-size: cover;
   background-position: center center;
 }
 
-.memo-grid{
+.memo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -14,41 +14,48 @@
   width: 950px;
 }
 
-.memo-card-container{
-
-    width: 200px;
-    height: 200px;
-    background-color: #E900FF;
-    overflow: hidden;
-    display: inline-flex;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 5px;
-    margin: 10px;
-    border: 4px;
-    border-color: #FAEB2C;
-    
-  }
+.memo-card-container {
+  width: 200px;
+  height: 200px;
+  background-color: #E900FF;
+  overflow: hidden;
+  display: inline-flex;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  margin: 10px;
+  border: 4px;
+  border-color: #FAEB2C;
+}
 
 .memo-clicked {
   background-color: #3d144c;
 }
 
-.memo-hidden{
+.memo-hidden {
   visibility: hidden;
 }
 
-
 .memo-card-container:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
-    .memo-card-container {
-      height: 150px;
-      width: 150px;
-    }
-    .memo-grid{
-      width: 700px;
-    }
+  .memo-card-container {
+    height: 150px;
+    width: 150px;
   }
+  .memo-grid {
+    width: 700px;
+  }
+}
 
+#memory-logo {
+  width: 530px;
+  height: 265px;
+  margin: auto;
+}
+
+.memory-logo-image {
+  width: 100%;
+  height: 100%;
+}
