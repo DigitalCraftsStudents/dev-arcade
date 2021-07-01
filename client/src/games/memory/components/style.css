@@ -39,6 +39,11 @@
   transform: scale(1.1);
 }
 
+.memo-card-face {
+  margin: auto;
+  font-size: 5rem;
+}
+
 @media (max-width: 800px) {
   .memo-card-container {
     height: 150px;
@@ -46,6 +51,9 @@
   }
   .memo-grid {
     width: 700px;
+  }
+  .memo-card-face {
+    font-size: 4rem;
   }
 }
 
