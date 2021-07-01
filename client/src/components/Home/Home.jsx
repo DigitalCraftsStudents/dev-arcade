@@ -45,7 +45,7 @@ const Home = (props) => {
   const classes = useStyles();
 
   const playSound = () => {
-    const audio = new Audio("Excellent-laugh.wav");
+    const audio = new Audio("Excellent-Test_your_luck.wav");
     audio.play();
   };
 
@@ -71,6 +71,7 @@ const Home = (props) => {
               <Link to="/chess">
                 <Paper className={classes.paper}>
                   <h3>Chess</h3>
+                  <img className="gameLogo" src="" alt="chess" />
                 </Paper>
               </Link>
             </Grid>
@@ -79,6 +80,7 @@ const Home = (props) => {
               <Link to="/memory">
                 <Paper className={classes.paper}>
                   <h3>Memory</h3>
+                  <img className="gameLogo" src="" alt="memory" />
                 </Paper>
               </Link>
             </Grid>
@@ -93,10 +95,9 @@ const Home = (props) => {
                 <Paper className={classes.paper}>
                   <img
                     className="gameLogo"
-                    src="minesweeper2.png"
+                    src="minesweeper-home.png"
                     alt="minesweeper"
                   />
-                  <p className={classes.text}>lorum ipsum</p>
                 </Paper>
               </Link>
             </Grid>
@@ -104,8 +105,7 @@ const Home = (props) => {
               <Link to="/rps">
                 <Paper className={classes.paper}>
                   <h3>Rock, Paper, Sissors</h3>
-                  <img src="iconimages/pageimage.png" alt="paperImage" />
-                  <p className={classes.text}>Update Profile</p>
+                  <img className="gameLogo" src="" alt="minesweeper" />
                 </Paper>
               </Link>
             </Grid>
@@ -117,11 +117,7 @@ const Home = (props) => {
             <Grid item xs={8}>
               <Link to="tetris">
                 <Paper className={classes.paper}>
-                  <h3>Tetris</h3>
-                  <img src="iconimages/emergencycardslist.png" alt="cardList" />
-                  <p className={classes.text}>
-                    Print Emergency Contact Cards for all Members
-                  </p>
+                  <img src="tetris-home.png" alt="tetris" />
                 </Paper>
               </Link>
             </Grid>
@@ -129,16 +125,21 @@ const Home = (props) => {
             <Grid item xs={2}></Grid>
           </Grid>
         </Grid>
+        <p>
+          made with <strong>Konami</strong> Action
+        </p>
 
-        <Konami action={playSound} timeout={5000}>
+        <Konami action={playSound} timeout={7000}>
           <KonamiImg>
             <Typography variant="h2">
-              Yelrac Zil defeats Snake Jodgel!!
+              SPECIAL ULTRA BONUS!! CLICK TO PLAY!
             </Typography>
-            <img
-              src="https://github.com/chrisowensdev/terminal-kombat/raw/master/images/intro_screen.png"
-              alt="terminal-kombat"
-            />
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <img
+                src="https://github.com/chrisowensdev/terminal-kombat/raw/master/images/intro_screen.png"
+                alt="terminal-kombat"
+              />
+            </a>
           </KonamiImg>
         </Konami>
       </div>
