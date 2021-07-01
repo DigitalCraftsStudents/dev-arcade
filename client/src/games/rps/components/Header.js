@@ -21,7 +21,7 @@ function Header() {
       <Container>
         <div id="container">
           <br></br><br></br>
-          <img src={H1} id="h1title"></img>
+          <img src={H1} id="h1title" alt='h1'/>
 
         </div>
       </Container>

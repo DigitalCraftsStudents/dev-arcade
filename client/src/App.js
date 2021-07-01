@@ -4,6 +4,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import HomeHeader from "./components/Home/Navbar/HomeHeader";
+import HomeHeaderLinks from "./components/Home/Navbar/HomeHeaderLinks";
 import Home from './components/Home/Home'
 /**
  * Games will be loaded into the Arcade here
@@ -23,10 +25,20 @@ import MemoryGame from './games/memory/MemoryGame';
 import MyChessBoard from './games/chess/components/MyChessBoard.js';
 
 
-function App() {
+function App(props) {
+  const { ...rest } = props;
   return (
     <div className="App">
-      
+      <HomeHeader
+        rightLinks={<HomeHeaderLinks />}
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white",
+        }}
+        {...rest}
+      />
       <Switch>
         <Route exact path="/">
           <Home />

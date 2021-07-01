@@ -1,7 +1,6 @@
-import HomeHeader from './Navbar/HomeHeader';
-import HomeHeaderLinks from './Navbar/HomeHeaderLinks';
+import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography, Modal } from "@material-ui/core";
 import styled from "styled-components";
 import Konami from "react-konami-code";
 import "./Home.css";
@@ -13,17 +12,40 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: "#3D144Ca1",
     border: "2px solid #F52789",
     color: "#FAEB2C",
     paddingBottom: "10px",
     paddingTop: "20px",
     textAlign: "center",
+    height: '120px'
   },
   text: {
     paddingTop: "5px",
   },
+  modalPaper: {
+    position: "absolute",
+    width: 800,
+    backgroundColor: "#FAEB2Ca1",
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
 }));
+
+function getModalStyle() {
+  const top = 50 ;
+  const left = 50 ;
+
+  return {
+    top: `${top}%`,
+    left: `${left}%`,
+    transform: `translate(-${top}%, -${left}%)`,
+  };
+}
 
 const KonamiImg = styled.div`
   position: fixed;
@@ -44,7 +66,7 @@ const KonamiImg = styled.div`
 `;
 
 const Home = (props) => {
-  const { ...rest } = props;
+  
   const classes = useStyles();
 
   const playSound = () => {
@@ -52,18 +74,23 @@ const Home = (props) => {
     audio.play();
   };
 
+  const [modalStyle] = useState(getModalStyle);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(true);
+
+  }, [setOpen])
+  
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  
+
   return (
     <>
-      <HomeHeader
-        rightLinks={<HomeHeaderLinks /> }
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
       <img className="logo" src="DAlogoRevised.png" alt="logo" />
 
       <div className={classes.root}>
@@ -76,7 +103,7 @@ const Home = (props) => {
               <Link to="/chess">
                 <Paper className={classes.paper}>
                   <h3>Chess</h3>
-                  <img className="gameLogo" src="" alt="chess" />
+                  
                 </Paper>
               </Link>
             </Grid>
@@ -85,7 +112,7 @@ const Home = (props) => {
               <Link to="/memory">
                 <Paper className={classes.paper}>
                   <h3>Memory</h3>
-                  <img className="gameLogo" src="" alt="memory" />
+                  
                 </Paper>
               </Link>
             </Grid>
@@ -109,8 +136,11 @@ const Home = (props) => {
             <Grid item xs={4}>
               <Link to="/rps">
                 <Paper className={classes.paper}>
-                  <h3>Rock, Paper, Sissors</h3>
-                  <img className="gameLogo" src="" alt="minesweeper" />
+                  <img
+                    className="gameLogo"
+                    src="Rps-home.png"
+                    alt="Rock, Paper, Sissors"
+                  />
                 </Paper>
               </Link>
             </Grid>
@@ -147,6 +177,17 @@ const Home = (props) => {
             </a>
           </KonamiImg>
         </Konami>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          <div style={modalStyle} className={classes.modalPaper}>
+            <img className="fbi" src="/Winners_Dont_use_Drugs.svg.png" alt="FBI Drug Warning"/>
+            <h2 className="modalText" id="simple-modal-title">Click anywhere to play</h2>
+          </div>
+        </Modal>
       </div>
     </>
   );
