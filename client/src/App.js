@@ -30,13 +30,17 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/counter">Counter Game</Link>
-        <br></br>
+        <br/>
         <Link to="/Minesweeper">MineSweeper Game</Link>
-        <br></br>
+        <br/>
         <Link to="/rps">Rock Paper Scissors</Link>
+        <br/>
         <Link to="/tetris">Tetris Game</Link>
+        <br/>
         <Link to="/memory">Memory Game</Link>
+        <br/>
         <Link to="/ping">Ping</Link>
+        <br/>
         <Link to="/chess">Chess</Link>
       </nav>
         <Switch>
