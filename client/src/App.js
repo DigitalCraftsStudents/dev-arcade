@@ -16,8 +16,11 @@ import {
  */
 
 import CounterGame from './games/counter/CounterGame';
-
+import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
 import Ping from './components/Ping';
+import Rps from './games/rps/Rps'
+import Tetris from "./games/tetris/tetris";
+import MemoryGame from './games/memory/MemoryGame';
 
 import MyChessBoard from './games/chess/components/MyChessBoard.js';
 
@@ -27,12 +30,30 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/counter">Counter Game</Link>
+        <br></br>
+        <Link to="/Minesweeper">MineSweeper Game</Link>
+        <br></br>
+        <Link to="/rps">Rock Paper Scissors</Link>
+        <Link to="/tetris">Tetris Game</Link>
+        <Link to="/memory">Memory Game</Link>
         <Link to="/ping">Ping</Link>
         <Link to="/chess">Chess</Link>
       </nav>
         <Switch>
           <Route path="/counter">
             <CounterGame />
+          </Route>
+          <Route path="/Minesweeper">
+            <MinesweeperGame/>
+          </Route>
+          <Route path="/rps">
+            <Rps />
+          </Route>
+          <Route path="/tetris">
+            <Tetris /> 
+          </Route>
+          <Route path="/memory">
+            <MemoryGame /> 
           </Route>
           <Route path="/ping">
             <Ping />

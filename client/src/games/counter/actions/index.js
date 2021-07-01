@@ -1,5 +1,6 @@
 export const INCREMENT = 'increment';
 export const DECREMENT = 'decrement';
+export const ADDSCORE = 'ADDSCORE';
 
 export function actionIncrement() {
   return {
@@ -10,5 +11,12 @@ export function actionIncrement() {
 export function actionDecrement() {
   return {
     type: DECREMENT
+  };
+}
+
+export function actionAddScore(payload) {
+  return {
+    type: ADDSCORE,
+    payload: payload
   };
 }

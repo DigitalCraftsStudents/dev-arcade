@@ -1,0 +1,49 @@
+#playerEntry {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: teal;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#playerEntry button {
+    display: block;
+    margin: auto;
+}
+
+#playerEntry input, #playerEntry button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#submitButton {
+    width: 100px;
+    align-items: center;
+    font-family: "DotGothic16", sans-serif;
+    background: #7c7c7c;
+    border-bottom: 6px inset rgba(0, 0, 0, 0.5);
+    border-left: 6px inset rgba(0, 0, 0, 0.5);
+    border-right: 6px inset rgba(255, 255, 255, 0.5);
+    border-top: 6px inset rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    color: cyan;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 1rem;
+    min-width: 200px;
+    padding: 0.5rem;
+    width: auto;
+  }
+  #submitButton:focus,
+  .btn:hover {
+    background: #153cb4;
+  }
+  #submitButton {
+    background: #94167f;
+  }
+  #submitButton:hover {
+    background: #e93479;
+  }
