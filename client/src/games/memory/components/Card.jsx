@@ -3,8 +3,10 @@ import './style.css';
 
 function Card(props) {
 
-    function handleClick(){
-        props.onClick(props.index)
+    function handleClick() {
+        if (props.isClicked !== true) {
+            props.onClick(props.index)
+        }
     }
 
     return (
