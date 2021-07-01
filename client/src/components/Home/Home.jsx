@@ -1,25 +1,25 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Paper, Typography } from "@material-ui/core";
 import styled from "styled-components";
-import LazyHero from "react-lazy-hero";
 import Konami from "react-konami-code";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: "#132143",
+    color: "#FAEB2C",
     flexGrow: 1,
   },
   paper: {
-    backgroundColor: "#E6EAF3",
-    border: "2px solid #FFBA00",
-    color: "#132143",
+    backgroundColor: "#3D144Ca1",
+    border: "2px solid #F52789",
+    color: "#FAEB2C",
     paddingBottom: "10px",
     paddingTop: "20px",
     textAlign: "center",
   },
   text: {
-    paddingTop: "16px",
+    paddingTop: "5px",
   },
 }));
 
@@ -51,90 +51,81 @@ const Home = (props) => {
 
   return (
     <>
-      <LazyHero
+      {/* <LazyHero
         color="#ffffff"
-        imageSrc="/heroimage.jpg"
+        imageSrc="/80s-grid.jpg"
         opacity="0.7"
         parallaxOffset="100"
       >
-        <img className="logo" src="squadmatelogo.png" alt="logo" />
-      </LazyHero>
-      
+        
+      </LazyHero> */}
+      <img className="logo" src="DAlogoRevised.png" alt="logo" />
+
       <div className={classes.root}>
-        <h2>Features</h2>
+        <h1>GAMES</h1>
         <Grid className="darkblue" container spacing={1}>
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={2}></Grid>
+
             <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <h3>Admin</h3>
-              </Paper>
+              <Link to="/chess">
+                <Paper className={classes.paper}>
+                  <h3>Chess</h3>
+                </Paper>
+              </Link>
             </Grid>
+
             <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <h3>Members</h3>
-              </Paper>
+              <Link to="/memory">
+                <Paper className={classes.paper}>
+                  <h3>Memory</h3>
+                </Paper>
+              </Link>
             </Grid>
+
             <Grid item xs={2}></Grid>
           </Grid>
 
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={2}></Grid>
             <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img src="iconimages/memberlist.png" alt="memberlist" />
-                <p className={classes.text}>View a List of Team Members</p>
-              </Paper>
+              <Link to="/minesweeper">
+                <Paper className={classes.paper}>
+                  <img
+                    className="gameLogo"
+                    src="minesweeper2.png"
+                    alt="minesweeper"
+                  />
+                  <p className={classes.text}>lorum ipsum</p>
+                </Paper>
+              </Link>
             </Grid>
             <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img src="iconimages/pageimage.png" alt="paperImage" />
-                <p className={classes.text}>Update Profile</p>
-              </Paper>
+              <Link to="/rps">
+                <Paper className={classes.paper}>
+                  <h3>Rock, Paper, Sissors</h3>
+                  <img src="iconimages/pageimage.png" alt="paperImage" />
+                  <p className={classes.text}>Update Profile</p>
+                </Paper>
+              </Link>
             </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
 
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={2}></Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img src="iconimages/emergencycardslist.png" alt="cardList" />
-                <p className={classes.text}>
-                  Print Emergency Contact Cards for all Members
-                </p>
-              </Paper>
+            <Grid item xs={8}>
+              <Link to="tetris">
+                <Paper className={classes.paper}>
+                  <h3>Tetris</h3>
+                  <img src="iconimages/emergencycardslist.png" alt="cardList" />
+                  <p className={classes.text}>
+                    Print Emergency Contact Cards for all Members
+                  </p>
+                </Paper>
+              </Link>
             </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img src="iconimages/emergencycard.png" alt="emergencycard" />
-                <p className={classes.text}>
-                  Update Emergency Contact Info Anytime
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={2}></Grid>
-          </Grid>
 
-          <Grid container item xs={12} spacing={3}>
-            <Grid item xs={2}></Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img
-                  src="iconimages/uploadreceiveforms.png"
-                  alt="receiveForm"
-                />
-                <p className={classes.text}>
-                  Upload and Receive Completed Forms
-                </p>
-              </Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.paper}>
-                <img src="iconimages/filloutforms.png" alt="fillout-forms" />
-                <p className={classes.text}>Fill Out and Submit Forms</p>
-              </Paper>
-            </Grid>
             <Grid item xs={2}></Grid>
           </Grid>
         </Grid>

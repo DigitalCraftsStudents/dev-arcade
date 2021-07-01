@@ -29,13 +29,28 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-          <Route path="/counter">
-            <CounterGame />
-          </Route>
-          <Route path="/ping">
-            <Ping />
-          </Route>
-        </Switch>
+        <Route path="/counter">
+          <CounterGame />
+        </Route>
+        <Route path="/ping">
+          <Ping />
+        </Route>
+        <Route path="/chess">
+          <Home />
+        </Route>
+        <Route path="/memory">
+          <Home />
+        </Route>
+        <Route path="/minesweeper">
+          <Home />
+        </Route>
+        <Route path="/rps">
+          <Home />
+        </Route>
+        <Route path="/tetris">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
