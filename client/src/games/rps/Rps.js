@@ -49,8 +49,8 @@ function Rps() {
   const [PlayerEntryDisplay, setPlayerEntryDisplay] = useState('block')
   return (
     <Provider store={store}>
-      <div className="undo_text_align rps_body">
-        <Wrapper>
+      <Wrapper className="undo_text_align rps_body">
+       
 
           <Header />
           <NameEntry handleChange={e => {
@@ -80,7 +80,7 @@ function Rps() {
           <GameBoard display={boardDisplay} />
           <Footer />
         </Wrapper>
-      </div>
+      
     </Provider>
   );
 }
