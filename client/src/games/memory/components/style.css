@@ -1,5 +1,5 @@
 #memory-game {
-  background-image: url("https://image.freepik.com/free-vector/retro-futuristic-synthwave-retrowave-styled-night-cityscape-with-sunset-background_148087-120.jpg");
+  background-image: url("https://cdnb.artstation.com/p/assets/images/images/012/022/523/large/arawn-dystopia-vaporwave-basic-font.jpg?1532614096");
   background-size: cover;
   background-position: center center;
 }
@@ -17,7 +17,9 @@
 .memo-card-container {
   width: 200px;
   height: 200px;
-  background-color: #E900FF;
+  background-image: url("https://image.freepik.com/free-vector/futuristic-sunset-illustration-retro-style-vaporwave-synthwave-abstract-template-with-star-sky_87408-188.jpg");
+  background-size: cover;
+  background-position: center center;
   overflow: hidden;
   display: inline-flex;
   font-family: 'Courier New', Courier, monospace;
