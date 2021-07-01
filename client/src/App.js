@@ -39,9 +39,9 @@ function App() {
         <br/>
         <Link to="/memory">Memory Game</Link>
         <br/>
-        <Link to="/ping">Ping</Link>
-        <br/>
         <Link to="/chess">Chess</Link>
+        <br/>
+        <Link to="/ping">Ping</Link>
       </nav>
         <Switch>
           <Route path="/counter">
@@ -59,11 +59,11 @@ function App() {
           <Route path="/memory">
             <MemoryGame /> 
           </Route>
-          <Route path="/ping">
-            <Ping />
-          </Route>
           <Route path="/chess">
             <MyChessBoard/>
+          </Route>
+          <Route path="/ping">
+            <Ping />
           </Route>
         </Switch>
     </div>
