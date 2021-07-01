@@ -4,6 +4,16 @@
   background-position: center center;
 }
 
+.memo-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 950px;
+}
+
 .memo-card-container{
 
     width: 200px;
@@ -36,6 +46,9 @@
     .memo-card-container {
       height: 150px;
       width: 150px;
+    }
+    .memo-grid{
+      width: 700px;
     }
   }
 
