@@ -70,7 +70,13 @@ function Rps() {
             <br></br>
             Scissors (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png" />) win against paper(<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />).
             <br></br>
-            Paper (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />) wins against rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />).</p>
+            Paper (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" />) wins against rock (<img className="icons" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" />).
+            <br></br>
+            <br></br>
+            Beat the AI and you get 10 points. Lose to the AI and you lose 15 points. 
+            If you make it to 100, you win!!!!
+            That is... IF you make it to 100...
+            </p>
           </Popup>
           <GameBoard display={boardDisplay} />
           <Footer />
