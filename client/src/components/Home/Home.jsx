@@ -1,3 +1,5 @@
+import HomeHeader from './Navbar/HomeHeader';
+import HomeHeaderLinks from './Navbar/HomeHeaderLinks';
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Paper, Typography } from "@material-ui/core";
 import styled from "styled-components";
@@ -42,6 +44,7 @@ const KonamiImg = styled.div`
 `;
 
 const Home = (props) => {
+  const { ...rest } = props;
   const classes = useStyles();
 
   const playSound = () => {
@@ -51,14 +54,16 @@ const Home = (props) => {
 
   return (
     <>
-      {/* <LazyHero
-        color="#ffffff"
-        imageSrc="/80s-grid.jpg"
-        opacity="0.7"
-        parallaxOffset="100"
-      >
-        
-      </LazyHero> */}
+      <HomeHeader
+        rightLinks={<HomeHeaderLinks /> }
+        fixed
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "white"
+        }}
+        {...rest}
+      />
       <img className="logo" src="DAlogoRevised.png" alt="logo" />
 
       <div className={classes.root}>
