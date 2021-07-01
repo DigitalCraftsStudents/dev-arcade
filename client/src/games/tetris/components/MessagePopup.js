@@ -8,13 +8,13 @@ export default function MessagePopup(props) {
 
   return (
     <>
-      {isRunning == false? 
+      {isRunning === false? 
       <div className='message-popup'>
         <h1>Pause</h1>
       </div>
       :
       <> </>}
-      {gameOver == true?
+      {gameOver === true?
       <div className='message-popup'>
         <h1>Game Over</h1>
       </div>
