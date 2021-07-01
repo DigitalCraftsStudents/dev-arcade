@@ -19,6 +19,7 @@ import MinesweeperGame from './games/Minesweeper/MinesweeperGame';
 import Ping from './components/Ping';
 import Rps from './games/rps/Rps'
 import Tetris from "./games/tetris/tetris";
+import MemoryGame from './games/memory/MemoryGame';
 
 function App() {
   return (
@@ -28,16 +29,14 @@ function App() {
         <br></br>
         <Link to="/Minesweeper">MineSweeper Game</Link>
         <br></br>
-        <Link to="/ping">Ping</Link>
         <Link to="/rps">Rock Paper Scissors</Link>
         <Link to="/tetris">Tetris Game</Link>
+        <Link to="/memory">Memory Game</Link>
+        <Link to="/ping">Ping</Link>
       </nav>
         <Switch>
           <Route path="/counter">
             <CounterGame />
-          </Route>
-          <Route path="/ping">
-            <Ping />
           </Route>
           <Route path="/Minesweeper">
             <MinesweeperGame/>
@@ -46,8 +45,14 @@ function App() {
             <Rps />
           </Route>
           <Route path="/tetris">
-          <Tetris /> 
-        </Route>
+            <Tetris /> 
+          </Route>
+          <Route path="/memory">
+            <MemoryGame /> 
+          </Route>
+          <Route path="/ping">
+            <Ping />
+          </Route>
         </Switch>
     </div>
   );
