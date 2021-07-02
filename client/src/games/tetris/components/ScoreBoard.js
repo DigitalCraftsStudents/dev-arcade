@@ -9,8 +9,10 @@ export default function ScoreBoard(props) {
 
   return (
     <div className="score-board">
-      <div>Name:{name}</div>
-      <div>Score:{score}</div>
+      <div>Name: {name}</div>
+      <br />
+      <div>Score: {score}</div>
+      <br />
       <button
         className="score-board-button"
         onClick={(e) => {
@@ -26,6 +28,7 @@ export default function ScoreBoard(props) {
       >
         {isRunning ? "Pause" : "Play"}
       </button>
+      <br />
       <button
         className="score-board-button"
         onClick={(e) => {
