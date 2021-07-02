@@ -15,7 +15,7 @@ const FileStore = require('session-file-store')(session);
 const app = express();
 const server = http.createServer(app);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 
 const logger = morgan('tiny');
@@ -37,11 +37,11 @@ app.use(session({
 }));
 
 const cn = {
-    host: 'batyr.db.elephantsql.com',
-    port: 5432,
-    database: 'ytomuxvb',
-    user: 'ytomuxvb',
-    password: 'WW70aJ1-FFC1FD-zbyBeZYOMxqHd9IGM',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     max: 30 // use up to 30 connections
 
     // "types" - in case you want to set custom type parsers on the pool level
@@ -67,8 +67,6 @@ app.get('/api/ping', (req, res) => {
 
 app.get('/highscores/:game', (req, res) => {
     const game = req.params.game;
-    console.log(game);
-
     try {
         db.any('SELECT * FROM highscores WHERE game = $1', [game])
         .then((data) => {
@@ -102,6 +100,6 @@ app.post('/newscore', (req, res) => {
 
 
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, () => {
     console.log(`Listening at http://${HOST}:${PORT}`);
 });
