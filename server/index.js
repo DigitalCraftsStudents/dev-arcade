@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0';
 
 const logger = morgan('tiny');
@@ -70,8 +70,6 @@ app.get('/api/ping', (req, res) => {
 
 app.get('/highscores/:game', (req, res) => {
     const game = req.params.game;
-    console.log(game);
-
     try {
         db.any('SELECT * FROM highscores WHERE game = $1', [game])
         .then((data) => {
@@ -107,6 +105,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/public/index.html'));
   }); 
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, () => {
     console.log(`Listening at http://${HOST}:${PORT}`);
 });
