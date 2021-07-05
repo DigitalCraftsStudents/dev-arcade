@@ -190,14 +190,8 @@ const Home = (props) => {
           aria-describedby="simple-modal-description"
         >
           <div style={modalStyle} className={classes.modalPaper}>
-            <img
-              className="fbi"
-              src="/Winners_Dont_use_Drugs.svg.png"
-              alt="FBI Drug Warning"
-            />
-            <h2 className="modalText" id="simple-modal-title">
-              Click anywhere to play
-            </h2>
+            <img className="fbi" src="FBI.png" alt="FBI Drug Warning"/>
+            <h2 className="modalText" id="simple-modal-title">Click anywhere to play</h2>
           </div>
         </Modal>
       </div>
