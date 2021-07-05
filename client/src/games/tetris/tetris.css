@@ -1,3 +1,8 @@
+@font-face {
+  src: url("./fonts/Minecraft.ttf");
+  font-family: minecraft;
+}
+
 /* App */
 .Tetris {
 
@@ -28,11 +33,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
   min-height: 10vh;
   grid-area: h;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 5px;
 }
 
 img.titleTetris {
@@ -42,13 +43,7 @@ img.titleTetris {
   margin-right: auto;
   width: 100%;
 }
-img.wallpaper {
-  background: url(./images/wallpaper.jpg);
-  background-repeat: no-repeat;
-  background-size: 300px 100px;
-}
 
-/* Next Block */
 .next-block {
   display: grid;
   grid-area: l;
@@ -56,29 +51,24 @@ img.wallpaper {
   align-self: flex-start;
 }
 
-/* Grid Board */
 .grid-board {
   display: grid;
   grid-template-columns: repeat(var(--cols), var(--tile-size));
   grid-gap: 0;
   align-self: flex-start;
   grid-area: c; /* Assign to grid area c */
-
 }
 
-/* score-board */
 .score-board {
   grid-area: r;
 }
 
-/* controls */
 .controls {
   grid-area: b;
   display: flex;
   flex-direction: row;
 }
 
-/* Control Button */
 .control-button {
   --size: calc(var(--tile-size) * 2.5);
   width: var(--size);
@@ -88,20 +78,22 @@ img.wallpaper {
   border-radius: 5px;
   background-color: var(--color-0);
   color: #FAEB2C;
+  text-shadow: 3px 3px 4px #dfd21e;
+  font-family: minecraft !important;
 }
 
-
-
-/* Message Popup Styles */
 .message-popup {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   width: calc(var(--tile-size) * 10);
   height: calc(var(--tile-size) * 10);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(206, 151, 252, 0.342);
+  border-radius: 5px;
   text-align: center;
+  font-family: minecraft !important;
+  
 }
 
 .message-popup.hidden {
@@ -113,10 +105,10 @@ img.wallpaper {
   --bg-color: rgba(150, 150, 150, 1);
 
   /* Border Colors are all transparent colors. These will tint or shade the background color of the square. */
-  --border-left-color: rgba(255, 255, 255, 0.20);
-  --border-top-color: rgba(255, 255, 255, 0.33);
-  --border-right-color: rgba(0, 0, 0, 0.15);
-  --border-bottom-color: rgba(0, 0, 0, 0.5);
+  --border-left-color: #3d144cd2;
+  --border-top-color: #621f7ad7;
+  --border-right-color: rgb(33, 2, 53);
+  --border-bottom-color: rgba(65, 5, 94, 0.5);
 
   /* Square Colors:  background colors for the squares.*/
   --color-0: #000000;
@@ -128,11 +120,6 @@ img.wallpaper {
   --color-6: #00FFFF;
   --color-7: #F51D00;
 
-  /* Button Colors */
-  --button-color-t: rgba(200, 200, 200, 1);
-  --button-color-r: rgba(150, 150, 150, 1);
-  --button-color-b: rgba(120, 120, 120, 1);
-  --button-color-l: rgba(222, 222, 222, 1);
 
   /* Numbers define values that will be used throughout the CSS.
   --tile-size: 20px for example will set size of the grid squares. */
@@ -204,5 +191,38 @@ img.wallpaper {
   border-radius: 5px;
   background-color: var(--color-0);
   color: #FAEB2C;
+  text-shadow: 3px 3px 4px #dfd21e;
+  font-family: minecraft !important;
 }
 
+.score-board {
+  font-family: minecraft !important;
+  text-align: left;
+  text-shadow: 1px 1px 2px #00b8b8;
+}
+
+.form {
+  font-family: minecraft !important;
+  padding-top: 70px;
+}
+
+.form-text {
+  font-family: minecraft !important;
+  font-size: 15px;
+  background-color: #00FFFF;
+  text-shadow: 1px 1px 2px #0000009c;
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.form-button {
+  font-family: minecraft !important;
+  background-color: var(--color-0);
+  color: #FAEB2C;
+  text-shadow: 3px 3px 4px #dfd21e;
+  display: block;
+  padding: 1em;
+  border-radius: 5px;
+  
+}
