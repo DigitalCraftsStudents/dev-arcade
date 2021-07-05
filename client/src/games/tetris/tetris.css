@@ -2,6 +2,10 @@
   src: url("./fonts/Minecraft.ttf");
   font-family: minecraft;
 }
+@font-face {
+  font-family: tetfont;
+  src: url("./fonts/tetri.ttf");
+}
 
 /* App */
 .Tetris {
@@ -28,7 +32,7 @@ and 'b'. The '.' represents an empty cell on the grid. */
                        ". b .";
 }
 
-.App-header {
+.tetris-header {
   background-color: #3D144C;
   min-height: 10vh;
   grid-area: h;
@@ -36,12 +40,14 @@ and 'b'. The '.' represents an empty cell on the grid. */
   border-radius: 5px;
 }
 
-img.titleTetris {
-  margin-top: 30px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+.tetris-title {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-size: 60px;
+  color: #dd0b4a;
+  text-shadow: 3px 3px 10px #00b8b8;
+  font-family: tetfont;
 }
 
 .next-block {
