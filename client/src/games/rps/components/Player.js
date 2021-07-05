@@ -3,7 +3,7 @@ import paper from "./images/paper.png";
 import scissors from "./images/scissors.png";
 import rock from "./images/rock.png";
 import './Player.css'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 
 

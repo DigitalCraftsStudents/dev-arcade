@@ -48,7 +48,7 @@ function NameEntry(props) {
 
     return (
         <PlayerEntry display={props.playerEntryDisplay}>
-            <label for='playerName'>Enter player name here:<br></br>
+            <label>Enter player name here:<br></br>
                 <PlayerEntryInput type='text' id='playerName' onChange={props.handleChange} placeholder='Player name here...'/>
                 <PlayerEntryButton id="submitButton" type='button' onClick={props.handleClick}>Submit Name</PlayerEntryButton>
             </label>

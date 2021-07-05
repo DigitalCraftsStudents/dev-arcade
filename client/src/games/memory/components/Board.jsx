@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Card from "./Card";
-import styled from "styled-components";
+// import styled from "styled-components";
 import {
   Dialog,
   DialogActions,
@@ -16,10 +16,10 @@ import './style.css';
 import { actionIncrement } from "../actions";
 
 function Board(props) {
-  const Grid = styled.div`
-    display: "grid";
-    font-family: "Courier New", Courier, monospace;
-  `;
+  // const Grid = styled.div`
+  //   display: "grid";
+  //   font-family: "Courier New", Courier, monospace;
+  // `;
   const possibleCardFaces = [
     "😋",
     "😋",

@@ -110,7 +110,7 @@ class GameWindow extends React.Component {
     }
 
     render() {
-        const { playerOne, aiPlayer, display }=this.state;
+        const { playerOne, aiPlayer}=this.state;
         return (
           <Board display={this.props.display}>
             <div id="board">

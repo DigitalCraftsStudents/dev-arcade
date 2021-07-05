@@ -3,14 +3,14 @@ import CreateBoard from '../utils/CreateBoard';
 import { revealed } from "../utils/Reveal";
 import Cell from './Cell';
 import { toast,ToastContainer } from 'react-toastify';
-import { connect,useSelector } from 'react-redux';
+import { connect } from 'react-redux';
 import scoreActions from '../actions/scoreActions';
 import 'react-toastify/dist/ReactToastify.css';
 function Board(props) {
     const [grid,setGrid]=useState([]);
     const [nonMinecount,setNonMinecount]=useState(0);
     const [mineLocation,setmineLocation]=useState([]);
-    const score = useSelector((state) => state.score);
+    // const score = useSelector((state) => state.score);
     
 
     const style={
@@ -72,7 +72,7 @@ function Board(props) {
         <div className="parent">
             <div>
         
-                <h3 style={{color:'white',textAlign:'center',fontSize:'30px',margin:'0px', paddingBottom: '15px', color: '#FAEB2C', fontFamily: 'primary-font', fontSize: '40px'}}>Non-Mines - {nonMinecount}</h3>
+                <h3 style={{textAlign:'center',margin:'0px', paddingBottom: '15px', color: '#FAEB2C', fontFamily: 'primary-font', fontSize: '40px'}}>Non-Mines - {nonMinecount}</h3>
                 <ToastContainer>
                 </ToastContainer>
                 {grid.map((singlerow,index1)=>{
