@@ -64,12 +64,10 @@ class GameWindow extends React.Component {
     determineWinner=() => {
         document.getElementById('resetDiv').style.display='flex'
         // this.countDown();
-        console.log(this.state.playerOne, this.state.aiPlayer);
         document.getElementById("player_one").style.display="inline";
         document.getElementById("ai_player").style.display="inline";
         this.comparePlayers();
         this.addMoves();
-        console.log(this.props)
     };
 
     comparePlayers=() => {
@@ -112,7 +110,6 @@ class GameWindow extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         const { playerOne, aiPlayer, display }=this.state;
         return (
           <Board display={this.props.display}>

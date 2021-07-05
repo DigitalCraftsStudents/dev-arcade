@@ -25,7 +25,6 @@ class Ping extends React.Component {
         fetch(url)
             .then(response => response.json())
             .then(response => {
-                console.log(response);
                 this.setState({
                     ping: response
                 });

@@ -40,7 +40,6 @@ function Board(props) {
         // deep copy of the object
         let newGrid=JSON.parse(JSON.stringify(grid));
         newGrid[x][y].flagged=true;
-        console.log(newGrid[x][y]);
         setGrid(newGrid);
     }
     const newfresh=()=>{
@@ -57,8 +56,6 @@ function Board(props) {
             setTimeout(newfresh,3000);
         }
         if(nonMinecount===0){
-            console.log(score);
-            console.log('inside nonminecount')
             props.handleClick();
             toast.success('Wohoo!!,You won',{ position: "top-center", autoClose: 1000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined, });
             setTimeout(newfresh,3000);

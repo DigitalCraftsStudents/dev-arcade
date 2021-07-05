@@ -77,7 +77,7 @@ function Board(props) {
     }, 400);
   };
 
-  console.log(clearedCards);
+  
 
   function handleClick(index) {
     // have max of 2 selected cards
@@ -95,7 +95,7 @@ function Board(props) {
     if (selectedCards.length === 2) {
       setTimeout(evaluate, 400);
     }
-    console.log(clearedCards);
+    
   }, [selectedCards]);
 
   const checkIsFlipped = (index) => {

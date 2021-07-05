@@ -28,7 +28,7 @@ function MyChessBoard() {
         })
         if (move === null) return;
         setFen(game.current.fen())
-        console.log(move)
+        
     };
     
     useEffect(() =>{

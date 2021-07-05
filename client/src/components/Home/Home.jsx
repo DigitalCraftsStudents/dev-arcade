@@ -94,7 +94,7 @@ const Home = (props) => {
       <img className="logo" src="DAlogoRevised.png" alt="logo" />
 
       <div className={classes.root}>
-        <h1>GAMES</h1>
+        <h1 className="h1-custom">GAMES</h1>
         <Grid className="darkblue" container spacing={1}>
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={2}></Grid>
@@ -102,8 +102,11 @@ const Home = (props) => {
             <Grid item xs={4}>
               <Link to="/chess">
                 <Paper className={classes.paper}>
-                  <h3>Chess</h3>
-                  
+                  <img
+                    className="chessLogo"
+                    src="chessLogo.png"
+                    alt="Memory"
+                  />
                 </Paper>
               </Link>
             </Grid>
@@ -111,8 +114,11 @@ const Home = (props) => {
             <Grid item xs={4}>
               <Link to="/memory">
                 <Paper className={classes.paper}>
-                  <h3>Memory</h3>
-                  
+                  <img
+                    className="memoryLogo"
+                    src="MemoryLogo.png"
+                    alt="Memory"
+                  />
                 </Paper>
               </Link>
             </Grid>
@@ -138,7 +144,7 @@ const Home = (props) => {
                 <Paper className={classes.paper}>
                   <img
                     className="gameLogo"
-                    src="Rps-home.png"
+                    src="rockpaperart.png"
                     alt="Rock, Paper, Sissors"
                   />
                 </Paper>
@@ -184,8 +190,14 @@ const Home = (props) => {
           aria-describedby="simple-modal-description"
         >
           <div style={modalStyle} className={classes.modalPaper}>
-            <img className="fbi" src="/Winners_Dont_use_Drugs.svg.png" alt="FBI Drug Warning"/>
-            <h2 className="modalText" id="simple-modal-title">Click anywhere to play</h2>
+            <img
+              className="fbi"
+              src="/Winners_Dont_use_Drugs.svg.png"
+              alt="FBI Drug Warning"
+            />
+            <h2 className="modalText" id="simple-modal-title">
+              Click anywhere to play
+            </h2>
           </div>
         </Modal>
       </div>

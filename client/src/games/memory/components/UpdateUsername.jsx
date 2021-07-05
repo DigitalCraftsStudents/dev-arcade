@@ -10,7 +10,6 @@ const UpdateUsername = ({ actionUpdateUsername }) => {
 
   const _handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userName);
     actionUpdateUsername({ name: userName });
     setUserName("");
   };
