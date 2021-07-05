@@ -21,21 +21,21 @@ import './Footer.css'
 
 function Footer() {
     return (
-      <div id="footer">
+      <FooterDiv id="footer">
         <a
           href="https://github.com/sriveragithub"
           target="_blank"
           rel="noreferrer"
         >
-          Skyler<img className="skyler" src={skyler} alt='skyler'/>{" "}
+          Skyler<img className="skyler" src={skyler} alt=""></img>{" "}
         </a>
         <a href="https://github.com/csolis1" target="_blank" rel="noreferrer">
-          Celida<img className="celi" src={celi} alt='Celida'/>{" "}
+          Celida<img className="celi" src={celi} alt=""></img>{" "}
         </a>
         <a href="https://github.com/myrriame" target="_blank" rel="noreferrer">
-          Myrriame<img className="myr" src={myr}alt='Myrriame' />{" "}
+          Myrriame<img className="myr" src={myr} alt=""></img>{" "}
         </a>
-      </div>
+      </FooterDiv>
     );
 
 }

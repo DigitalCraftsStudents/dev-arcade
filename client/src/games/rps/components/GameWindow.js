@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { actionIncrement, actionDecrement, actionIncreaseMove } from "../actions";
 import "./GameWindow.css";
 import Versus from "./Versus";
+// import Countdown from './Countdown';
 
 
 const actions=["rock", "paper", "scissors"];
@@ -15,17 +16,23 @@ const actions=["rock", "paper", "scissors"];
 
 
 const Board=styled.div`
+display: ${props => props.display? props.display:'none'};
 margin: auto;
 width: 800px;
 height: 500px;
-border: 1px solid;
+border: 3px solid;
 color: rgb(167, 105, 209);`
 
 const Window=styled.div`
+padding-top: 2rem;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
 margin: auto;
 width: 785px;
 height: 450px;
-border: 1px solid rgb(158, 83, 201);`
+border: 3px solid rgb(158, 83, 201);`
 
 const Top=styled.div`
 text-align: left;
@@ -40,14 +47,13 @@ class GameWindow extends React.Component {
         this.state={
             playerOne: actions[1],
             aiPlayer: actions[1],
-
+            display: props.display
 
         };
     }
 
     selectAction=(selection) => {
         document.getElementById('pickObject').style.display='none'
-        document.getElementById('resetDiv').style.display='flex'
         this.setState({
             playerOne: selection,
             aiPlayer: actions[Math.floor(Math.random()*actions.length)],
@@ -57,7 +63,7 @@ class GameWindow extends React.Component {
 
     determineWinner=() => {
         document.getElementById('resetDiv').style.display='flex'
-        this.countDown();
+        // this.countDown();
         console.log(this.state.playerOne, this.state.aiPlayer);
         document.getElementById("player_one").style.display="inline";
         document.getElementById("ai_player").style.display="inline";
@@ -85,70 +91,90 @@ class GameWindow extends React.Component {
     };
 
 
-    countDown=() => {
-        const Box=document.getElementById("countdownbox");
-        let words=['ROCK', 'PAPER', 'SCISSORS'], i=0;
-        function iterateWords() {
-            i<words.length-1? i+=1:i=0;
-            Box.innerHTML=words[i];
-        }
-        setInterval(iterateWords, 3000);
-    }
+    // countDown=() => {
+    //     const Box=document.getElementById("countdownbox");
+    //     let words=['ROCK', 'PAPER', 'SCISSORS'], i=0;
+    //     function iterateWords() {
+    //         i<words.length-1? i+=1:i=0;
+    //         Box.innerHTML=words[i];
+    //     }
+    //     setInterval(iterateWords, 3000);
+    // }
     addMoves=() => {
         this.props.increasemove();
     }
 
     resetClick=() => {
-        document.getElementById('pickObject').style.display='flex'
+        document.getElementById('pickObject').style.display='block'
         document.getElementById("player_one").style.display="none";
         document.getElementById("ai_player").style.display="none";
         document.getElementById('resetDiv').style.display='none'
     }
 
     render() {
-        const { playerOne, aiPlayer }=this.state;
+        console.log(this.props)
+        const { playerOne, aiPlayer, display }=this.state;
         return (
-            <Board>
-                <div id="board">
-                    <Top><div id="top">
-                        <span>&nbsp;x&nbsp;</span>&nbsp;
-        </div></Top>
-                    <Window>
-                        <div id="window">
-                            <div id="countdownbox"></div>
-                            <Player id="player_one" actions={playerOne} />
-                            <Versus />
-                            <Player id="ai_player" actions={aiPlayer} />
-                            <div id="pickObject">
-                                <button
-                                    className="action-btn-1"
-                                    onClick={() => this.selectAction("rock")}
-                                >
-                                    <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/rock.png" alt="rock"/>
-              ROCK
-            </button>
-            &nbsp;
-            <button
-                                    className="action-btn-2"
-                                    onClick={() => this.selectAction("paper")}
-                                >
-                                    <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/paper.png" alt="paper"/>
-              PAPER
-            </button>
-            &nbsp;
-            <button
-                                    className="action-btn-3"
-                                    onClick={() => this.selectAction("scissors")}
-                                >
-                                    <img className="icon" src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png" alt="scissors"/>
-              SCISSORS
-            </button>
-                            </div>
-                            <Reset onClick={() => { this.resetClick() }} />
-                        </div>
-                    </Window>
+          <Board display={this.props.display}>
+            <div id="board">
+              <Top>
+                <div id="top">
+                  <span>&nbsp;x&nbsp;</span>&nbsp;
                 </div>
-            </Board>
+              </Top>
+
+              <Window id="window">
+                {/* <Countdown /> */}
+
+                <Player id="player_one" actions={playerOne} />
+
+                <Versus />
+                <Player id="ai_player" actions={aiPlayer} />
+                <div id="pickObject">
+                  <button
+                    className="action-btn-1"
+                    onClick={() => this.selectAction("rock")}
+                  >
+                    <img
+                      className="icon"
+                      src="https://img.icons8.com/ios-glyphs/30/000000/rock.png"
+                      alt=""
+                    />
+                    ROCK
+                  </button>
+                  &nbsp;
+                  <button
+                    className="action-btn-2"
+                    onClick={() => this.selectAction("paper")}
+                  >
+                    <img
+                      className="icon"
+                      src="https://img.icons8.com/ios-glyphs/30/000000/paper.png"
+                      alt=""
+                    />
+                    PAPER
+                  </button>
+                  &nbsp;
+                  <button
+                    className="action-btn-3"
+                    onClick={() => this.selectAction("scissors")}
+                  >
+                    <img
+                      className="icon"
+                      src="https://img.icons8.com/ios-glyphs/30/000000/barber-scissors.png"
+                      alt=""
+                    />
+                    SCISSORS
+                  </button>
+                </div>
+                <Reset
+                  onClick={() => {
+                    this.resetClick();
+                  }}
+                />
+              </Window>
+            </div>
+          </Board>
         );
     }
 }
