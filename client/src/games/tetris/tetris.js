@@ -20,12 +20,8 @@ function Tetris() {
     
     <Provider store={store}>
       <div className="Tetris">
-        <header className="App-header">
-          <img
-          src={title}
-          alt="title"
-          className="titleTetris"
-        />
+        <header className="tetris-header">
+          <h1 className="tetris-title">TETRIS</h1>
         </header>
         
         <Form />
