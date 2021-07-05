@@ -1,20 +1,20 @@
 
 import React from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 import myr from '../components/images/myr.png';
 import celi from '../components/images/celi.png';
 import skyler from '../components/images/skyler.png';
 import './Footer.css'
 
-// const FooterDiv=styled.div`
-// text-align: center;
-// margin: auto;
-// position: bottom;
-// left: 0;
-// bottom: 0;
-// width: 100%;
-// border-top: 1px solid #222;
-// background-color: #222;`
+const FooterDiv=styled.div`
+text-align: center;
+margin: auto;
+position: bottom;
+left: 0;
+bottom: 0;
+width: 100%;
+border-top: 1px solid #222;
+background-color: #222;`
 
 
 

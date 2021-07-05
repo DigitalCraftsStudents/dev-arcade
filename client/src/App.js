@@ -33,10 +33,6 @@ function App(props) {
         rightLinks={<HomeHeaderLinks />}
         fixed
         color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white",
-        }}
         {...rest}
       />
       <Switch>
