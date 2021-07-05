@@ -20,24 +20,36 @@ function Form({playerName}) {
     }
 
     return (
-        <>
-        {credential != null?
-        <></>
-        :
-        <div>
-            <form onSubmit={event => _handleFormSubmit(event)}>
-                <label> Username
-                    <input type='text' name='username' placeholder='enter name' onChange={event => _handleChange(event.target.value)} value={username}>
-                    </input>
-                </label>
-                <button type='submit' >
-                    Submit
-                </button>
+      <>
+        {credential != null ? (
+          <></>
+        ) : (
+          <div className="form">
+            <form onSubmit={(event) => _handleFormSubmit(event)}>
+              <label>
+                {" "}
+                Username
+                <br />
+                <br />
+                <input
+                  className="form-text"
+                  type="text"
+                  name="username"
+                  placeholder="enter name"
+                  maxlength="10"
+                  onChange={(event) => _handleChange(event.target.value)}
+                  value={username}
+                ></input>
+              </label>
+              <br />
+              <button className="form-button" type="submit">
+                Submit
+              </button>
             </form>
-        </div>
-        }
-        </>
-    )
+          </div>
+        )}
+      </>
+    );
 }
 
 export default connect(null, {playerName}) (Form);

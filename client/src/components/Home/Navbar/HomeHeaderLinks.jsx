@@ -30,17 +30,15 @@ export default function HeaderLinks(props) {
         <CustomDropdown
           left
           caret={true}
+          color="primary"
           hoverColor="black"
-          buttonText={
-            <>
-              <Button color="infoColor" className={classes.navLink}>
-                Menu
-              </Button>
-            </>
-          }
+          buttonText=
+              
+                "Start Menu"
+              
           buttonProps={{
             className: classes.navLink + " " + classes.imageDropdownButton,
-            color: "transparent",
+            color: "primary",
           }}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>

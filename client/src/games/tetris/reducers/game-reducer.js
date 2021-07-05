@@ -45,7 +45,6 @@ const gameReducer = (state = defaultState(), action) => {
     case MOVE_DOWN:
       // Get the next potential Y position
       const maybeY = y + 1;
-      console.log (state)
 
       // Check if the current block can move here
       if (canMoveTo(shape, grid, x, maybeY, rotation)) {
@@ -77,7 +76,6 @@ const gameReducer = (state = defaultState(), action) => {
       // TODO: Check and Set level
       // Score increases decrease interval
       newState.score = score + checkRows(newGrid);
-       console.log(newState);
       return newState;
 
     case USERNAME:
