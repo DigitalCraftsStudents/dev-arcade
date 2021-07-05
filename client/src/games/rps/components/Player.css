@@ -1,5 +1,11 @@
-#rps_action{
-    width:30%;
+#rock1{
+    width:60%;
     float: center;
 
 }
+
+#paper1{
+    width:50%;
+    /* float: center; */
+}
+

@@ -11,23 +11,18 @@ font-weight: 700;`
 
 const Container=styled.div`
 margin: auto;
-width: 50%;`
+width: 100%;`
 
 
 
 function Header() {
   return (
     <Wrapper>
-      <Container>
-        <div id="container">
-          <br></br><br></br>
-          <img src={H1} id="h1title" alt='h1'/>
-
-        </div>
+      <Container id="container">
+        <img src={H1} id="h1title" alt=""></img>
       </Container>
     </Wrapper>
-
-  )
+  );
 
 }
 

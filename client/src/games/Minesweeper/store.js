@@ -1,7 +1,6 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers/playerReducer';
 
-console.log('Donald wants to see something')
 
 // const saveToLocalstorageMiddleware = store => next => action => {
 // 	next(action);

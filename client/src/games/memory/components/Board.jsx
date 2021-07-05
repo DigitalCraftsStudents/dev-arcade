@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Card from "./Card";
-import styled from "styled-components";
+// import styled from "styled-components";
 import {
   Dialog,
   DialogActions,
@@ -9,16 +9,17 @@ import {
   Button,
   DialogTitle,
 } from "@material-ui/core";
+import { withStyles } from '@material-ui/core/styles';
 import { connect } from "react-redux";
 import './style.css';
 
 import { actionIncrement } from "../actions";
 
 function Board(props) {
-  const Grid = styled.div`
-    display: "grid";
-    font-family: "Courier New", Courier, monospace;
-  `;
+  // const Grid = styled.div`
+  //   display: "grid";
+  //   font-family: "Courier New", Courier, monospace;
+  // `;
   const possibleCardFaces = [
     "😋",
     "😋",
@@ -76,7 +77,7 @@ function Board(props) {
     }, 400);
   };
 
-  console.log(clearedCards);
+  
 
   function handleClick(index) {
     // have max of 2 selected cards
@@ -94,7 +95,7 @@ function Board(props) {
     if (selectedCards.length === 2) {
       setTimeout(evaluate, 400);
     }
-    console.log(clearedCards);
+    
   }, [selectedCards]);
 
   const checkIsFlipped = (index) => {
@@ -128,9 +129,27 @@ function Board(props) {
     setShuffledCards(shuffle(possibleCardFaces));
   };
 
+  // restart button style
+  const StyledButton = withStyles({
+    root: {
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+      borderRadius: 3,
+      border: 0,
+      color: 'white',
+      height: 40,
+      padding: '0 30px',
+      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      marginTop: '40px'
+    },
+    label: {
+      textTransform: 'capitalize',
+      fontSize: 'large'
+    },
+  })(Button);
+
   return (
-    <div style={{ background: "rgb(22,133,248)" }}>
-      <Grid>
+    <div>
+      <div className="memo-grid">
         {shuffledCards.map((face, index) => {
           return (
             <Card
@@ -144,10 +163,10 @@ function Board(props) {
             />
           );
         })}
-      </Grid>
-      <Button onClick={handleRestart} color="primary" variant="contained">
-        Restart
-      </Button>
+      </div>
+      <StyledButton onClick={handleRestart}>
+        RESTART
+      </StyledButton>
       <Dialog
         open={showGameOver}
         disableBackdropClick

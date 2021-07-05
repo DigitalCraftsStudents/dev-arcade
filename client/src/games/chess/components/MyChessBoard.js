@@ -4,7 +4,14 @@ import React, {useState, useEffect, useRef} from 'react';
 import Chess from "chess.js"
 import store from "../store";
 import { Provider } from 'react-redux';
-// This is App.js from video
+
+import NameForm from "./NameForm";
+
+
+
+
+
+
 const container = {
     marginTop: "2rem",
     display: "flex",
@@ -21,7 +28,7 @@ function MyChessBoard() {
         })
         if (move === null) return;
         setFen(game.current.fen())
-        console.log(move)
+        
     };
     
     useEffect(() =>{
@@ -45,10 +52,14 @@ function MyChessBoard() {
 <ChessBoard position={fen} 
 onDrop = {onDrop}/>
 </div>
+<NameForm/>
     </>
     </Provider>
 );
 };
+
+
+
 
 
 export default MyChessBoard;
