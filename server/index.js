@@ -2,7 +2,7 @@ require('dotenv').config();    // don't forget to require dotenv
 
 const http = require('http');
 const express = require('express');
-const cors = requre('cors');
+const cors = require('cors');
 const morgan = require('morgan');
 const pgp = require('pg-promise')();
 const helmet = require('helmet');
