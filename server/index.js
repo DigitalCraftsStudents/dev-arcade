@@ -2,6 +2,7 @@ require('dotenv').config();    // don't forget to require dotenv
 
 const http = require('http');
 const express = require('express');
+const cors = requre('cors');
 const morgan = require('morgan');
 const pgp = require('pg-promise')();
 const helmet = require('helmet');
@@ -26,6 +27,7 @@ app.set('views', 'templates');
 app.set('view engine', 'html');
 
 app.use(express.static(path.join(__dirname, '/public')));
+app.use(cors())
 
 app.use(session({
     // store: new FileStore({logFn: function(){}}),  // no options for now
